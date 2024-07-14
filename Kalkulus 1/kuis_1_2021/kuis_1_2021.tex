@@ -1,0 +1,245 @@
+\begin{flushright}
+    \textbf{\Large{Kuis 1}}
+    \subsection*{Tahun 2021}
+    \addcontentsline{toc}{subsection}{Kuis 1 - 2021}
+\end{flushright}
+\vspace{0.5cm}
+\hrule height 2pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{MATERI}}
+    \begin{enumerate}[leftmargin=*, label={\arabic*}.]
+        \item Menyelesaikan pertidaksamaan yang melibatkan nilai mutlak.
+        \item Fungsi komposisi dan menentukan domainnya.
+        \item Mencari nilai limit kiri dan nilai limit kanan fungsi.
+        \item Menentukan kekontinuan fungsi pada suatu titik.
+    \end{enumerate}
+\end{center}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Diketahui 
+$f(x) = \abs{x-2}$ dan 
+$g(x) = x+1$.
+\begin{enumerate}[label={\alph*}.]
+    \item Tentukanlah nilai $x$ yang memenuhi $f(x) \leq g(x)$.
+    \item Jika 
+    $h(x) = \sqrt{g(x)}$, maka tentukanlah 
+    $(f \circ h)(x)$ dan domain dari
+    $(f \circ h)(x)$. Jelaskanlah jawaban anda!
+\end{enumerate}
+\item Misalkan
+\[
+    f(x) = 
+    \begin{cases}
+        2-x^{2}, &\text{jika $0 \leq x < 1$}\\
+        \frac{5}{2}, &\text{jika $x = 1$}\\
+        \abs{2-x}, &\text{jika $1 < x \leq 3$}\\
+        \frac{a}{2x-3}, &\text{jika $3 < x \leq 5$}
+    \end{cases}
+\]
+\begin{enumerate}[label={\alph*}.]
+    \item Apakah fungsi $f$ kontinu di $x=1$? Jelaskanlah jawaban anda!
+    \item Tentukan nilai $a$ sehingga $f$ kontinu di $x=3$. Jelaskanlah!
+\end{enumerate}
+\end{enumerate}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+
+\begin{center}
+    \textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item
+\begin{enumerate}[label={\alph*}.]
+\item Akan dicari nilai $x$ yang memenuhi
+$f(x) \leq g(x) \iff \abs{x-2} \leq x+1$.\\
+Hanya ada 3 aturan dasar yang diperlukan untuk menyelesaikan pertidaksamaan.
+\begin{enumerate}[label={\arabic*})]
+    \item Jumlahkan kedua ruas dengan bilangan yang sama.
+    \item Kalikan kedua ruas dengan bilangan positif yang sama.
+    \item Kalikan kedua ruas dengan bilangan negatif yang sama dan 
+    mengubah arah pertidaksamaannya.
+\end{enumerate}
+Pada soal ini ruas kiri melibatkan nilai mutlak. Untuk menyelesaikannya 
+pertidaksamaan perlu diubah kebentuk yang tidak melibatkan nilai mutlak. 
+Cara yang selalu bisa digunakan adalah dengan membagi kasus pada nilai $x$.
+    
+Perhatikan bahwa sesuai definisi nilai mutlak
+\[
+\abs{x-2} = 
+\begin{cases}
+    x-2, &\text{jika $x-2 \geq 0$ atau $x \geq 2$}\\
+    -(x-2), &\text{jika $x-2 < 0$ atau $x < 2$}
+\end{cases}
+\]
+Sehingga pertidaksamaan ini diselesaikan dengan membagi menjadi 2 kasus 
+seperti yang terlihat pada garis bilangan di bawah ini.
+    
+\vspace{0.2cm}
+\begin{tikzpicture}
+\draw[stealth-stealth] (-6,0) node[below]{$-\infty$}--(5,0) node[below]{$\infty$};
+\draw (0,.1)--(0,-.1) node[below=0.2em]{$2$};
+\node at (-7,.4) {$\abs{x-2}=$};
+    
+\node at (-3,.4) {$-(x-2)$};
+\node at (3,.4) {$x-2$};
+\end{tikzpicture}
+    
+\textbf{Kasus 1: $x < 2$}\\
+Maka
+\begin{align*}
+    \abs{x-2} \leq x+1
+    \iff &-(x-2) \leq x+1 
+    &\text{definisi nilai mutlak} \\
+    \iff &2-x \leq x+1
+    &\text{penyederhanaan}\\
+    \iff &-2x \leq -1
+    &\text{kedua ruas jumlahkan $-2-x$}\\
+    \iff &x \geq \frac{1}{2}
+    &\text{kedua ruas kalikan $-\frac{1}{2}$}
+\end{align*}
+Sehingga untuk kasus $x < 2$ nilai $x$ yang memenuhi pertidaksamaan adalah 
+$x \geq \frac{1}{2}$. Dengan kata lain, nilai $-\frac{1}{2} \leq x < 2$ 
+memenuhi pertidaksamaan.
+    
+\textbf{Kasus 2: $x \geq 2$}\\
+Maka
+\begin{align*}
+    \abs{x-2} \leq x+1
+    \iff &x-2 \leq x+1 
+    &\text{definisi nilai mutlak} \\
+    \iff &-2 \leq 1
+    &\text{kedua ruas jumlahkan $-x$}
+\end{align*}
+Ini menandakan untuk semua nilai $x \geq 2$ pertidaksamaan akan ujungnya 
+berbentuk $-2 \leq 1$ yang selalu bernilai benar. Dengan kata lain, semua 
+nilai $x \geq 2$ memenuhi pertidaksamaan.
+    
+Semua nilai $x$ yang memenuhi $f(x) \leq g(x)$ adalah gabungan nilai $x$ 
+dari kedua kasus. Sehingga nilai $x$ yang memenuhi adalah 
+$\set*{\frac{1}{2} \leq x < 2 \cup x \geq 2}$ atau 
+$\set*{x \in \mathbb{R} \mid x \geq \frac{1}{2}}$
+atau $\cintervalo*{\frac{1}{2}, \infty}$
+    
+$\therefore$ Nilai $x$ yang memenuhi $f(x) \leq g(x)$ adalah
+$\set*{x \in \mathbb{R} \mid x \geq \frac{1}{2}}$ atau
+$\cintervalo*{\frac{1}{2}, \infty}$.
+    
+\vspace{0.1cm}
+\textbf{Catatan:}\\
+Salah satu cara untuk mengubah pertidaksamaan yang melibatkan nilai mutlak 
+ke pertidaksamaan yang tidak adalah dengan menguadratkan kedua ruas. Soal 
+ini \textbf{TIDAK} dapat diselesaikan dengan cara tersebut. Hal ini 
+dikarenakan cara tersebut memiliki syarat yaitu kedua ruasnya harus bernilai 
+positif. Pada kasus ini ruas kiri dapat bernilai negatif.
+\begin{center}
+    \line(1,0){150}
+\end{center}
+\item Akan dicari $(f \circ h)(x)$ dan domainnya.\\
+Soal memberikan informasi bahwa $f(x) = \abs{x-2}$, $g(x) = x+1$ dan 
+$h(x) = \sqrt{g(x)} = \sqrt{x+1}$.\\
+Dengan definisi fungsi komposisi, maka
+\[
+    (f \circ h)(x) = f(h(x)) = f\bracket*{\sqrt{x+1}} = \abs*{\sqrt{x+1}-2}
+\]
+Domain dari komposisi $f \circ h$ adalah himpunan nilai $x$ dimana
+\begin{enumerate}[label={\arabic*})]
+    \item $x$ berada di dalam domain dari $h$
+    \item $h(x)$ berada di dalam domain dari $f$
+\end{enumerate}
+Karena $h(x) = \sqrt{x+1}$ memiliki bentuk akar maka domain natural dari 
+fungsi $h(x)$ adalah \\ $x+1 \geq 0 \iff x \geq -1$.
+Selanjutnya karena range dari $h$ atau semua nilai $h(x)$ positif, maka
+semua $h(x)$ berada di dalam domain dari $f$. Sehingga domain dari 
+$f \circ h$ adalah $\set*{x \geq -1}$ atau $\cintervalo{-1,\infty}$
+    
+$\therefore$ $(f \circ h)(x) = \abs*{\sqrt{x+1} - 2}$ dengan domain 
+$\set*{x \geq -1}$ atau $\cintervalo{-1,\infty}$ 
+    
+\vspace{0.1cm}
+\textbf{Catatan:}\\
+Cara mudah untuk mencari domainnya adalah mencari langsung domain 
+$f \circ h$ dari $(f \circ h)(x)$ dan mengambil irisannya dengan 
+domain dari $h$. (Lihat Kuis 1 2022 - 1b)
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\end{enumerate}
+\item
+\begin{enumerate}[label={\alph*}.]
+\item Akan dibuktikan $f$ tidak kontinu di $x=1$.\\
+Tiga syarat untuk membuktikan $f$ kontinu di $x=1$ adalah
+\begin{enumerate}[label={\arabic*}.]
+    \item $\lim_{x\to 1} f(x)$ ada.
+    \item $f(1)$ ada.
+    \item $\lim_{x\to 1} f(x) = f(1)$
+\end{enumerate}
+Membuktikan tidak berlaku maka menunjukan salah satu syarat tersebut tidak
+terpenuhi.\\
+$\lim_{x\to 1} f(x)$ ada karena limit kanan dan limit kiri ada dan bernilai sama.
+\begin{align*}
+    \lim_{x\to 1^{-}} f(x) 
+    &= \lim_{x\to 1^{-}} 2-x^{2}
+    &\text{definisi fungsi $f$}\\
+    &= 2-1^{2} = 1
+    &\text{teorema subtitusi}\\
+    \lim_{x\to 1^{+}} f(x) 
+    &= \lim_{x\to 1^{+}} \abs{2-x}
+    &\text{definisi fungsi $f$}\\
+    &= \abs{2-1} = 1
+    &\text{teorema subtitusi}
+\end{align*}
+$f(1)$ ada karena sesuai definisi soal bahwa $f(1) = \frac{5}{2}$.\\
+Syarat ketiga tidak terpenuhi karena
+\[
+    \lim_{x\to 1} f(x) = 1 \neq \frac{5}{2} = f(1)
+\].
+Sehingga $f$ tidak kontinu di $x=1$ karena tidak memenuhi syarat ketiga
+
+$\therefore$ $f$ tidak kontinu di $x=1$ karena $\lim_{x\to 1} f(x) \neq f(1)$
+\begin{center}
+    \line(1,0){150}
+\end{center}
+\item Akan dicari nilai $a$ sehingga $f$ kontinu di $x=3$.\\
+Sama seperti sebelumnya, tiga syarat untuk membuktikan $f$ kontinu di
+$x=3$ adalah:
+\begin{enumerate}[label={\arabic*}.]
+    \item $\lim_{x\to 3} f(x)$ ada.
+    \item $f(3)$ ada.
+    \item $\lim_{x\to 3} f(x) = f(3)$
+\end{enumerate}
+Mulai dengan menentukan $a$ sehingga limit fungsi di $x=3$ ada. Hal ini 
+dapat dilakukan dengan menyamakan limit kanan dan limit kiri.
+\begin{align*}
+    \lim_{x\to 3^{-}} f(x) 
+    &= \lim_{x\to 3^{-}} \abs{2-x}
+    &\text{definisi fungsi $f$}\\
+    &= \abs{2-3} = 1
+    &\text{teorema subtitusi}\\
+    \lim_{x\to 3^{+}} f(x) 
+    &= \lim_{x\to 3^{+}} \frac{a}{2x-3}
+    &\text{definisi fungsi $f$}\\
+    &= \frac{a}{6-3} = \frac{a}{3}
+    &\text{teorema subtitusi}
+\end{align*}
+Pilih $a = 3$ sehingga
+\[
+    \lim_{x\to 3^{+}} f(x) = \frac{a}{3} = \frac{3}{3} = 1 = \lim_{x\to 3^{-}} f(x) 
+\]
+Syarat pertama terpenuhi yaitu $\lim_{x\to 3} f(x) = 1$ ada.\\
+Syarat kedua terpenuhi karena dari definisi fungsi $f(3) = \abs{2-3} = 1$.\\
+Syarat ketiga juga terpenuhi karena $\lim_{x\to 3} f(x) = 1 = f(3)$.
+Sehingga dengan memilih $a=3$ fungsi $f$ kontinu di $x=3$.
+
+$\therefore$ Nilai $a$ sehingga $f$ kontinu di $x=3$ adalah $a=3$.
+\end{enumerate}
+\end{enumerate}
+\begin{center}
+    \line(1,0){300}
+\end{center}

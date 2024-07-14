@@ -1,0 +1,364 @@
+\newpage
+\begin{flushright}
+    \textbf{\Large{Ujian Tengah Semester}}
+    \subsection*{Tahun 2021}
+    \addcontentsline{toc}{subsection}{UTS - 2021}
+\end{flushright}
+\vspace{0.5cm}
+\hrule height 2pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{MATERI}}
+    \begin{enumerate}[leftmargin=*, label={\arabic*}.]
+        \item Menyelesaikan pertidaksamaan yang melibatkan nilai mutlak.
+        \item Mensketsa grafik fungsi.
+        \item Fungsi komposisi dan menentukan domain dan rangenya.
+        \item Mencari nilai limit kiri dan nilai limit kanan fungsi.
+        \item Mencari nilai limit fungsi di tak hingga.
+        \item Menentukan kekontinuan fungsi pada suatu titik.
+        \item Menyelesaikan masalah turunan implisit.
+        \item Menyelesaikan permasalahan maksimum dan minimum.
+    \end{enumerate}
+\end{center}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Tentukan $\ds\frac{dy}{dx}$ dan $\ds\frac{d^{2}y}{dx^{2}}$ dari:
+\begin{enumerate}[label={\alph*}.]
+    \item $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$.
+    \item $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$.
+\end{enumerate}
+\item Diketahui $f(x)=\sqrt{x}$ dan $g(x)=x^{2}-3$. Tentukanlah:
+\begin{enumerate}[label={\alph*}.]
+    \item $h(x)$ jika diketahui $h(x)=(f \circ g)(x)$.
+    \item Domain dari $h(x)$.
+    \item Apakah $h(x)$ termasuk fungsi ganjil, genap atau bukan keduanya?
+    \item Gambar grafik dari $h(x)$.
+\end{enumerate}
+\item Tangki tanpa tutup bervolume $1125$ cm$^3$, dengan alas persegi bersisi $x$ 
+cm dan kedalaman $y$ cm. Permukaan atas tangki sejajar dengan tanah. Tangki akan 
+dibangun untuk menampung air hujan. Biaya pembuatan tangki tidak hanya melibatkan 
+material pembuatan tangki namun juga biaya penggalian tanah yang sebanding dengan 
+hasil kali $xy$. Jika biaya total adalah $C=5(x^{2}+4xy)+10xy$ rupiah per cm$^2$, 
+berapakah ukuran $x$ dan $y$ yang meminimumkan biaya?
+\item Tentukan nilai $a$ dan $b$ agar fungsi berikut kontinu untuk setiap bilangan 
+real $x$.
+\[
+    f(x)=
+    \begin{cases}
+        ax+5b, &x \leq 0,\\
+        x^2+3a-b, &0 < x \leq 2,\\
+        3x-5, &x > 2.
+    \end{cases}
+\]
+\item Diketahui panjang jalan antara kota $A$ dan kota $B$ adalah $100$ km, dengan 
+batas kecepatan tempuh adalah $100$ km/jam. Misalkan mobil $X$ berangkat dari kota 
+$A$ menuju kota $B$ pada jam keberangkatan yang sama dengan mobil $Y$ berangkat 
+dari kotab $B$ menuju kota $A$. Kedua mobil berpapasan disuatu titik setelah 
+menempuh 30 menit waktu perjalanan.
+\begin{enumerate}[label={\alph*}.]
+    \item Tunjukkan bahwa salah satu mobil memiliki kecepatan tempuh melebihi $100$ 
+    km/jam.
+    \item  Andaikan selama perjalanan kecepatan tempuh mobil $X$ tidak pernah melebihi
+    $90$ km/jam, berapakah kecepatan tempuh sesaat mobil $Y$ selama perjalanan?
+\end{enumerate}
+\end{enumerate}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item 
+\begin{enumerate}[label={\alph*}.]
+    \item Pertama akan dicari $\ds\frac{dy}{dx}$ dari 
+    $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$.
+
+    Turunkan secara implisit:
+    \begin{align*}
+        &\drv{x}{x^{3}+3x^{2}y-6xy^{2}+2y^{3}}=\drv{x}{0}\\
+        \iff &\drv{x}{x^{3}}+\drv{x}{3x^{2}y}+\drv{x}{-6xy^{2}}
+        +\drv{x}{2y^{3}} = 0
+    \end{align*}
+    Selesaikan masing-masing turunan:
+    \begin{enumerate}[label={\arabic*})]
+    \item \[
+    \drv{x}{x^{3}} = 3x^{2}
+    \]
+    \item \[
+    \drv{x}{3x^{2}y} = \drv{x}{3x^{2}}y+3x^{2}\drv{x}{y} = 6xy+3x^{2}y'
+    \]
+    \item 
+    \begin{align*}
+        \drv{x}{-6xy^{2}} &= \drv{x}{-6x}y^{2} + (-6x)\drv{x}{y^{2}}
+        &\text{aturan perkalian}\\
+        &=(-6)y^{2}-6x\bracket*{2y\drv{x}{y}}
+        &\text{aturan rantai}\\
+        &=-6y^{2}-12xyy'
+    \end{align*}
+    \item Gunakan aturan rantai
+    \begin{align*}
+        \drv{x}{2y^{3}} = 6y^{2}\drv{x}{y} = 6y^{2}y'
+    \end{align*}
+    \end{enumerate}
+    Diperoleh
+    \begin{align*}
+        &\drv{x}{x^{3}}+\drv{x}{3x^{2}y}+\drv{x}{-6xy^{2}}+\drv{x}{2y^{3}} = 0\\
+        \iff &3x^{2}+(6xy+3x^{2}y')+(-6y^2-12xyy')+6y^{2}y'=0
+    \end{align*}
+    Subtitusi $x=1$ dan $y=1$ diperoleh
+    \begin{align*}
+        &3(1)^{2}+(6(1)(1)+3(1)^{2}y')+(-6(1)^{2}-12(1)(1)y')+6(1)^2y'=0\\
+        \iff &3+6+3y'-6-12y'+6y'=0\\
+        \iff &3-3y'=0\\
+        \iff &y' = 1
+    \end{align*}
+    Diperoleh $\ds\frac{dy}{dx}$ dari 
+    $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$ adalah $1$.
+
+    Kedua akan dicari $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$.
+
+    Sebelumnya telah diperoleh
+    \[
+        3x^{2}+(6xy+3x^{2}y')+(-6y^2-12xyy')+6y^{2}y'=0
+    \]
+    Turunkan lagi secara implisit
+    \begin{align*}
+        &\drv{x}{3x^{2}+(6xy+3x^{2}y')+(-6y^2-12xyy')+6y^{2}y'} = \drv{x}{0}\\
+        \iff &\drv{x}{3x^{2}}+\drv{x}{6xy}+\drv{x}{3x^{2}y'}
+        +\drv{x}{-6y^{2}}+\drv{x}{-12xyy'}+\drv{x}{6y^{2}y'}=0
+    \end{align*}
+    Selesaikan masing-masing turunan
+    \begin{enumerate}[label={\arabic*})]
+    \item \[
+        \drv{x}{3x^{2}} = 6x
+    \]
+    \item \[
+        \drv{x}{6xy} = \drv{x}{6x}y + 6x\drv{x}{y} = 6y+6xy'
+    \]
+    \item \[
+        \drv{x}{3x^{2}y'} = \drv{x}{3x^{2}}y' + 3x^{2}\drv{x}{y'} = 6xy'+3x^{2}y''
+    \]
+    \item \[
+        \drv{x}{-6y^{2}} = -12y\drv{x}{y} = -12yy'
+    \]
+    \item \begin{align*}
+        \drv{x}{-12xyy'} &= \drv{x}{-12xy}y'+(-12xy)\drv{x}{y'}
+        &\text{aturan perkalian}\\
+        &=\drv{x}{-12xy}y'-12xyy''\\
+        &=\bracket*{\drv{x}{-12x}y+(-12x)\drv{x}{y}}y'-12xyy''
+        &\text{aturan perkalian}\\
+        &=(-12y-12xy')y'-12xyy''
+    \end{align*}
+    \item \[
+        \drv{x}{6y^{2}y'} = \drv{x}{6y^{2}}y' + 6y^{2}\drv{x}{y'} 
+        =\bracket*{12y\drv{x}{y}}y'+6y^{2}y''=12y(y')^{2}+6y^{2}y''
+    \]
+    \end{enumerate}
+    Diperoleh
+    \begin{align*}
+        &\drv{x}{3x^{2}}+\drv{x}{6xy}+\drv{x}{3x^{2}y'}
+        +\drv{x}{-6y^{2}}+\drv{x}{-12xyy'}+\drv{x}{6y^{2}y'}=0\\
+        \iff &(6x)+(6y+6xy')+(6xy'+3x^{2}y'')+(-12yy')
+        +\bracket*{(-12y-12xy')y'-12xyy''}\\
+        &+(12y(y')^{2}+6y^{2}y'')=0
+    \end{align*}
+    Subtitusi $x=1$, $y=1$, dan $y'=1$ diperoleh
+    \begin{align*}
+        &(6x)+(6y+6xy')+(6xy'+3x^{2}y'')+(-12yy')
+        +\bracket*{(-12y-12xy')y'-12xyy''}\\
+        &+(12y(y')^{2}+6y^{2}y'')=0\\
+        \iff &(6(1))+(6(1)+6(1)(1))+(6(1)(1)+3(1)^{2}y'')+(-12(1)(1))\\
+        &+\bracket*{(-12(1)-12(1)(1))(1)-12(1)(1)y''}+(12(1)(1)^{2}+6(1)^{2}y'')=0\\
+        \iff &6+6+6+6+3y''-12-12-12-12y''+12+6y''=0\\
+        \iff &-3y''=0 \iff y''=0
+    \end{align*}
+    Diperoleh $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$ adalah $0$.
+    
+    $\therefore$ $\ds\frac{dy}{dx}$ dan $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $x^{3}+3x^{2}y-6xy^{2}+2y^{3}=0$ pada titik $(1,1)$ adalah $1$ dan $0$.
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Pertama akan dicari $\ds\frac{dy}{dx}$ dari 
+    $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$.
+
+    Turunkan secara implisit:
+    \begin{align*}
+        &\drv{x}{y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}}=\drv{x}{5}\\
+        \iff &\drv{x}{y^{4}}+\drv{x}{\cos\bracket*{x^{2}y^{3}}}
+        +\drv{x}{3y^{2}}+\drv{x}{x^{2}} = 0
+    \end{align*}
+    Selesaikan masing-masing turunan:
+    \begin{enumerate}[label={\arabic*})]
+    \item \[
+    \drv{x}{y^{4}} = 4y^{3}\drv{x}{y} = 4y^{3}y'
+    \]
+    \item \begin{align*}
+        \drv{x}{\cos\bracket*{x^{2}y^{3}}} 
+        &= -\sin\bracket*{x^{2}y^{3}}\drv{x}{x^{2}y^{3}}
+        &\text{aturan rantai}\\
+        &= -\sin\bracket*{x^{2}y^{3}}\bracket*{\drv{x}{x^{2}}y^{3}+x^{2}\drv{x}{y^{3}}}
+        &\text{aturan perkalian}\\
+        &= -\sin\bracket*{x^{2}y^{3}}\bracket*{2xy^{3}+x^{2}\bracket*{3y^{2}\drv{x}{y}}}
+        &\text{aturan rantai}\\
+        &= -\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')
+    \end{align*}
+    \item \[
+    \drv{x}{3y^{2}} = 6y\drv{x}{y} = 6yy'
+    \]
+    \item \[
+    \drv{x}{x^{2}} = 2x
+    \]
+    \end{enumerate}
+    Diperoleh
+    \begin{align*}
+        &\drv{x}{y^{4}}+\drv{x}{\cos\bracket*{x^{2}y^{3}}}
+        +\drv{x}{3y^{2}}+\drv{x}{x^{2}} = 0\\
+        \iff &4y^{3}y'
+        +\bracket*{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}+6yy'+2x=0
+    \end{align*}
+    Subtitusi $x=0$ dan $y=1$ diperoleh
+    \begin{align*}
+        &4y^{3}y'
+        +\bracket*{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}+6yy'+2x=0\\
+        \iff &4(1)^{3}y'
+        +\bracket*{-\sin\bracket*{(0)^{2}(1)^{3}}(2(0)(1)^{3}+3(0)^{2}(1)^{2}y')}+6(1)y'
+        +2(0)=0\\
+        \iff &4y'+(-\sin(0)(0+0))+6y'+0=0 \\
+        \iff &10y'=0 \iff y'=0
+    \end{align*}
+    Diperoleh $\ds\frac{dy}{dx}$ dari 
+    $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$ adalah $0$.
+
+    \item Kedua akan dicari $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$.
+
+    Sebelumnya telah diperoleh
+    \[
+    4y^{3}y'+\bracket*{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}+6yy'+2x=0
+    \]
+    Turunkan secara implisit:
+    \begin{align*}
+        &\drv{x}{4y^{3}y'
+        +\bracket*{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}+6yy'+2x}=
+        \drv{x}{0}\\
+        \iff &\drv{x}{4y^{3}y'}+\drv{x}{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}
+        +\drv{x}{6yy'}\\
+        &+\drv{x}{2x}=0
+    \end{align*}
+    Selesaikan masing-masing turunan:
+    \begin{enumerate}[label={\arabic*})]
+    \item \begin{align*}
+        \drv{x}{4y^{3}y'} &= \drv{x}{4y^{3}}y' + 4y^{3}\drv{x}{y'}
+        &\text{aturan perkalian}\\
+        &=\bracket*{12y^{2}\drv{x}{y}}y'+4y^{3}y''
+        &\text{aturan rantai}\\
+        &=12y^{2}(y')^{2}+4y^{3}y''
+    \end{align*}
+    \item \begin{align*}
+        \drv{x}{6yy'} &= \drv{x}{6y}y'+6y\drv{x}{y'}
+        &\text{aturan perkalian}\\
+        &=6\drv{x}{y}y'+6yy'' \\
+        &= 6(y')^{2}+6yy''
+    \end{align*}
+    \item \[
+    \drv{x}{2x} = 2
+    \]
+    \item \begin{align*}
+        &\drv{x}{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}\\
+        =\,&\drv{x}{-\sin\bracket*{x^{2}y^{3}}}(2xy^{3}+3x^{2}y^{2}y')
+        +\bracket*{-\sin\bracket*{x^{2}y^{3}}}\drv{x}{2xy^{3}+3x^{2}y^{2}y'}
+        \quad *\\
+        =\,&\bracket*{-\cos\bracket*{x^{2}y^{3}}\bracket*{2xy^{3}+x^{2}3y^{2}y'}}
+        (2xy^{3}+3x^{2}y^{2}y')\\
+        &+\bracket*{-\sin\bracket*{x^{2}y^{3}}}
+        \bracket*{2y^{3}+12xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''}\\
+        =\,&\bracket*{-\cos\bracket*{x^{2}y^{3}}\bracket*{2xy^{3}+x^{2}3y^{2}y'}^{2}}
+        \\&+\bracket*{-\sin\bracket*{x^{2}y^{3}}}
+        \bracket*{2y^{3}+12xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''}
+    \end{align*}
+    $*$ Selesaikan masing-masing turunan ini
+    \begin{align*}
+        \drv{x}{-\sin\bracket*{x^{2}y^{3}}}
+        &=-\cos\bracket*{x^{2}y^{3}}\drv{x}{x^{2}y^{3}}
+        &\text{aturan rantai}\\
+        &=-\cos\bracket*{x^{2}y^{3}}
+        \bracket*{\drv{x}{x^{2}}y^{3}+x^{2}\drv{x}{y^{3}}}
+        &\text{aturan perkalian}\\
+        &=-\cos\bracket*{x^{2}y^{3}}
+        \bracket*{2xy^{3}+x^{2}3y^{2}\drv{x}{y}}
+        &\text{aturan rantai}\\
+        &=-\cos\bracket*{x^{2}y^{3}}
+        \bracket*{2xy^{3}+x^{2}3y^{2}y'}
+    \end{align*}
+    dan
+    \begin{align*}
+        &\drv{x}{2xy^{3}+3x^{2}y^{2}y'} \\
+        =\,&\drv{x}{2xy^{3}}+\drv{x}{3x^{2}y^{2}y'}\\
+        =\,&\bracket*{\drv{x}{2x}y^{3}+2x\drv{x}{y^{3}}}
+        +\bracket*{\drv{x}{3x^{2}y^{2}}y'+3x^{2}y^{2}\drv{x}{y'}}\\
+        =\,&\bracket*{2y^{3}+2x(3y^2)\drv{x}{y}}
+        +\bracket*{\bracket*{\drv{x}{3x^{2}}y^2+3x^{2}\drv{x}{y^2}}y'
+        +3x^{2}y^{2}y''}\\
+        &=(2y^{3}+6xy^{2}y')+\bracket*{\bracket*{6xy^{2}+3x^{2}2y\drv{x}{y}}y'
+        +3x^{2}y^{2}y''}\\
+        &=2y^{3}+6xy^{2}y'+6xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''\\
+        &=2y^{3}+12xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''\\
+    \end{align*}
+    \end{enumerate}
+    Diperoleh
+    \begin{align*}
+        &\drv{x}{4y^{3}y'}+\drv{x}{-\sin\bracket*{x^{2}y^{3}}(2xy^{3}+3x^{2}y^{2}y')}
+        +\drv{x}{6yy'}\\
+        &+\drv{x}{2x}=0\\
+        \iff &\bracket*{12y^{2}(y')^{2}+4y^{3}y''}
+        +\bracket*{-\cos\bracket*{x^{2}y^{3}}\bracket*{2xy^{3}+x^{2}3y^{2}y'}^{2}}
+        \\&+\bracket*{-\sin\bracket*{x^{2}y^{3}}}
+        \bracket*{2y^{3}+12xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''}\\
+        &+\bracket*{6(y')^{2}+6yy''} + 2 = 0
+    \end{align*}
+    Subtitusi $x=0$, $y=1$, dan $y'=0$ diperoleh
+    \begin{align*}
+        &\bracket*{12y^{2}(y')^{2}+4y^{3}y''}
+        +\bracket*{-\cos\bracket*{x^{2}y^{3}}\bracket*{2xy^{3}+x^{2}3y^{2}y'}^{2}}
+        \\&+\bracket*{-\sin\bracket*{x^{2}y^{3}}}
+        \bracket*{2y^{3}+12xy^{2}y'+6x^{2}y(y')^{2}+3x^{2}y^{2}y''}\\
+        &+\bracket*{6(y')^{2}+6yy''} + 2 = 0\\
+        \iff &\bracket*{12(1)^{2}(0)^{2}+4(1)^{3}y''}
+        +\bracket*{-\cos\bracket*{(0)^{2}(1)^{3}}\bracket*{2(0)(1)^{3}+(0)^{2}3(1)^{2}(1)}^{2}}
+        \\&+\bracket*{-\sin\bracket*{(0)^{2}(1)^{3}}}
+        \bracket*{2(1)^{3}+12(0)(1)^{2}(0)'+6(0)^{2}(1)(0)^{2}+3(0)^{2}(1)^{2}y''}\\
+        &+\bracket*{6(0)^{2}+6(1)y''} + 2 = 0\\
+        \iff &(0+4y'')+(-\cos(0)(0))+(-\sin(0)(2))+(0+6y'')+2=0\\
+        \iff &10y''+2=0 \iff y'' = -\frac{1}{5}
+    \end{align*}
+    Diperoleh $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$ adalah $\ds-\frac{1}{5}$.
+    
+    $\therefore$ $\ds\frac{dy}{dx}$ dan $\ds\frac{d^{2}y}{dx^{2}}$ dari 
+    $y^{4}+\cos\bracket*{x^{2}y^{3}}+3y^{2}+x^{2}=5$ pada titik $(0,1)$ adalah $0$ dan $\ds-\frac{1}{5}$.
+\end{enumerate}
+\vspace{0.1cm}
+\textbf{Catatan:}\\
+Cara lebih cepat untuk menyelesaikan soal ini, khususnya saat mencari 
+turunan kedua soal 1b adalah saat ketika mencari turunan masing-masing, 
+lakukan subtitusi nilai $x$, $y$ dan $y'$ pada baris dengan simbol $*$. 
+Hal ini dikarenakan beberapa nilainya akan berujung $0$ sehingga penurunan 
+hanya akan membuang waktu.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+
+\end{enumerate}
+
+\begin{center}
+    \line(1,0){300}
+\end{center}

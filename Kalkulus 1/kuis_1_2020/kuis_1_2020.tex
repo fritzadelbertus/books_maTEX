@@ -1,0 +1,382 @@
+\begin{flushright}
+    \section*{\Large{Kuis 1}}
+    \addcontentsline{toc}{section}{Kuis 1}
+    \subsection*{Tahun 2020}
+    \addcontentsline{toc}{subsection}{Kuis 1 - 2020}
+\end{flushright}
+\vspace{0.5cm}
+\hrule height 2pt
+\vspace{0.5cm}
+%========= ========= ========= ========= ========= ========= ========= =========|||
+\begin{center}
+    \textbf{\large{MATERI}}
+    \begin{enumerate}[leftmargin=*, label={\arabic*}.]
+        \item Menyelesaikan pertidaksamaan yang melibatkan nilai mutlak.
+        \item Mencari nilai limit kiri dan nilai limit kanan fungsi.
+        \item Mencari nilai limit fungsi di tak hingga.
+        \item Mencari nilai turunan fungsi menggunakan definisi.
+        \item Menyelesaikan masalah turunan implisit.
+        \item Menyelesaikan permasalahan laju yang berkaitan.
+        \item Mencari nilai maksimum dan minimum fungsi.
+    \end{enumerate}
+\end{center}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Tentukanlah himpunan penyelesaian dari $\abs{2x-1} \geq 2\abs{x+1}$.
+\item Hitunglah limit berikut (jika ada)!
+    \begin{enumerate}[label={\alph*}.]
+        \item $\ds \lim_{x\to -\infty} \frac{2x}{\abs{x}}$
+        \item $\ds \lim_{x\to 5^{-}} \frac{x^{2}-3x-10}{x^{2}-10x+25}$
+    \end{enumerate}
+\item Diberikan fungsi 
+$\ds
+    f(x) = 
+    \begin{cases}
+        x+1, &\text{jika $x \geq 0$}\\
+        x^{2}+1, &\text{jika $x < 0$}
+    \end{cases}
+$. Hitunglah $f'(0)$ (jika ada)!
+\item Tentukanlah kemiringan garis singgung dari kurva $\cos (xy^{2})-\sin y = x$ 
+di titik $(x,y) = (1,0)$.
+\item Pada suatu empang yang tenang (tidak ada riak gelombang), dijatuhkan sebuah 
+batu kecil, sehingga dihasilkan riak gelombang berbentuk lingkaran. Jari-jari 
+riak-lingkaran tersebut bertambah dengan laju konstan 3 cm/detik. Seberapa cepat 
+pertambahan \textbf{luas daerah} yang dijalani riak-lingkaran tersebut ketika 
+jari-jari riak-lingkaran tersebut 10 cm?
+\item Tentukanlah nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^{2}}$ 
+pada interval $I = \cintervalc*{-1,2}$
+\end{enumerate}
+\vspace{0.2cm}
+\hrule height 1pt
+
+\newpage
+\begin{center}
+    \textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Akan dicari himpunan penyelesaian dari $\abs{2x-1} \geq 2\abs{x+1}$.\\
+Hanya ada 3 aturan dasar yang diperlukan untuk menyelesaikan pertidaksamaan.
+\begin{enumerate}[label={\arabic*})]
+    \item Jumlahkan kedua ruas dengan bilangan yang sama.
+    \item Kalikan kedua ruas dengan bilangan positif yang sama.
+    \item Kalikan kedua ruas dengan bilangan negatif yang sama dan 
+    mengubah arah pertidaksamaannya.
+\end{enumerate}
+Pada soal ini kedua ruas melibatkan nilai mutlak. Untuk menyelesaikannya 
+pertidaksamaan perlu diubah kebentuk yang tidak melibatkan nilai mutlak. 
+Cara yang selalu bisa digunakan adalah dengan membagi kasus pada nilai $x$.
+
+Perhatikan bahwa sesuai definisi nilai mutlak
+\[
+\abs{2x-1} = 
+\begin{cases}
+    2x-1, &\text{jika $2x-1 \geq 0$ atau $x \geq \frac{1}{2}$}\\
+    -(2x-1), &\text{jika $2x-1 < 0$ atau $x < \frac{1}{2}$}
+\end{cases}
+\]
+dan
+\[
+\abs{x+1} = 
+\begin{cases}
+    x+1, &\text{jika $x+1 \geq 0$ atau $x \geq -1$}\\
+    -(x+1), &\text{jika $x+1 < 0$ atau $x < -1$}
+\end{cases}
+\]
+Sehingga pertidaksamaan ini diselesaikan dengan membagi menjadi 3 kasus seperti 
+yang terlihat pada garis bilangan di bawah ini.
+
+\vspace{0.2cm}
+\begin{tikzpicture}
+\draw[stealth-stealth] (-6,0) node[below]{$-\infty$}--(5,0) node[below]{$\infty$};
+\draw (-2,.1)--(-2,-.1) node[below=0.2em]{$-1$};
+\draw (1,.1)--(1,-.1) node[below=0.2em]{$\frac{1}{2}$};
+\node at (-7,1) {$\abs{2x-1}=$};
+\node at (-7,.4) {$\abs{x+1}=$};
+
+\node at (-4,1) {$-(2x-1)$};
+\node at (-4,.4) {$-(x+1)$};
+
+\node at (-.5,1) {$-(2x-1)$};
+\node at (-.5,.4) {$x+1$};
+
+\node at (3,1) {$-(2x-1)$};
+\node at (3,.4) {$x+1$};
+\end{tikzpicture}
+
+\textbf{Kasus 1: $x < -1$}\\
+Maka
+\begin{align*}
+    \abs{2x-1} \geq 2\abs{x+1} 
+    \iff &-(2x-1) \geq 2(-(x+1)) 
+    &\text{definisi nilai mutlak} \\
+    \iff &1-2x \geq -2x-2
+    &\text{penyederhanaan}\\
+    \iff &1 \geq -2
+    &\text{kedua ruas jumlahkan $2x$}
+\end{align*}
+Ini menandakan untuk semua nilai $x < -1$ pertidaksamaan akan ujungnya 
+berbentuk $1 \geq -2$ yang selalu bernilai benar. Dengan kata lain, semua 
+nilai $x < -1$ memenuhi pertidaksamaan.
+
+\textbf{Kasus 2: $-1 \leq x < \frac{1}{2}$}\\
+Maka
+\begin{align*}
+    \abs{2x-1} \geq 2\abs{x+1} 
+    \iff &-(2x-1) \geq 2(x+1)
+    &\text{definisi nilai mutlak} \\
+    \iff &1-2x \geq 2x+2
+    &\text{penyederhanaan}\\
+    \iff &-4x \geq 1
+    &\text{kedua ruas jumlahkan $-1-2x$}\\
+    \iff &x \leq -\frac{1}{4}
+    &\text{kedua ruas kalikan $-\frac{1}{4}$}
+\end{align*}
+Sehingga untuk kasus $-1 \leq x < \frac{1}{2}$ nilai $x$ yang memenuhi 
+pertidaksamaan adalah $x \leq -\frac{1}{4}$. Dengan kata lain, nilai 
+$-1 \leq x \leq -\frac{1}{4}$ memenuhi pertidaksamaan.
+
+\textbf{Kasus 3: $x \geq \frac{1}{2}$}\\
+Maka
+\begin{align*}
+    \abs{2x-1} \geq 2\abs{x+1} 
+    \iff &2x-1 \geq 2(x+1)
+    &\text{definisi nilai mutlak} \\
+    \iff &2x-1 \geq 2x+2
+    &\text{penyederhanaan}\\
+    \iff &-1 \geq 2
+    &\text{kedua ruas jumlahkan $-2x$}
+\end{align*}
+Ini menandakan untuk semua nilai $x \geq \frac{1}{2}$ pertidaksamaan 
+akan ujungnya berbentuk $-1 \geq 2$ yang selalu bernilai salah.
+Dengan kata lain, semua nilai $x \geq \frac{1}{2}$ tidak memenuhi 
+pertidaksamaan.
+
+Himpunan penyelesaiannya adalah gabungan semua nilai $x$ yang memenuhi 
+pertidaksamaan. Sehingga himpunan tersebut adalah 
+$\set*{x < -1 \cup -1 \leq x \leq -\frac{1}{4}}$ 
+atau $\set*{x \in \mathbb{R} \mid x \leq -\frac{1}{4}}$
+atau $\ointervalc*{-\infty,-\frac{1}{4}}$
+
+$\therefore$ Himpunan penyelesaian dari $\abs{2x-1} \geq 2\abs{x+1}$
+adalah $\set*{x \in \mathbb{R} \mid x \leq -\frac{1}{4}}$
+atau $\ointervalc*{-\infty,-\frac{1}{4}}$
+
+\vspace{0.1cm}
+\textbf{Catatan:}\\
+Salah satu cara untuk mengubah pertidaksamaan yang melibatkan nilai mutlak ke 
+pertidaksamaan yang tidak adalah dengan menguadratkan kedua ruas. Soal ini 
+dapat diselesaikan dengan cara tersebut tetapi tidak semua soal dapat 
+diselesaikan dengan cara itu. Hal ini dikarenakan cara tersebut memiliki syarat 
+yaitu kedua ruasnya harus bernilai positif.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Akan dicari limit dari soal yang diberikan (jika ada).
+\begin{enumerate}[label={\alph*}.]
+    \item Akan dicari limit dari 
+    $\ds \lim_{x\to -\infty} \frac{2x}{\abs{x}}$
+    \begin{align*}
+        \lim_{x\to -\infty} \frac{2x}{\abs{x}} 
+        &= \lim_{x\to -\infty} \frac{2x}{-x}
+        &\text{definisi nilai mutlak $x < 0$ karena menuju $-\infty$}\\
+        &= \lim_{x\to -\infty} \frac{2}{-1}
+        &\text{kalikan $\frac{1/x}{1/x}$ (karena $x \neq 0$)}\\
+        &= -2
+        &\text{teorema utama limit}
+    \end{align*}
+    Sehingga nilai limit fungsi ini saat $x$ menuju $-\infty$ adalah $-2$
+
+    $\therefore$ $\ds \lim_{x\to -\infty} \frac{2x}{\abs{x}} = -2$
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Akan dibuktikan 
+    $\ds \lim_{x\to 5^{-}} \frac{x^{2}-3x-10}{x^{2}-10x+25}$ tidak ada.
+
+    \begin{align*}
+        \lim_{x\to 5^{-}} \frac{x^{2}-3x-10}{x^{2}-10x+25} 
+        &= \lim_{x\to 5^{-}} \frac{(x-5)(x+2)}{(x-5)(x-5)}
+        &\text{faktorisasi}\\
+        &= \lim_{x\to 5^{-}} \frac{x+2}{x-5}
+        &\text{kalikan $\frac{1/(x-5)}{1/(x-5)}$ (karena $x \neq 5$)}\\
+        &= -\infty
+        &\text{menuju bentuk $\frac{7}{0}$ dari kiri}
+    \end{align*}
+    Sehingga limitnya tidak ada.
+
+    $\therefore$
+    $\ds \lim_{x\to 5^{-}} \frac{x^{2}-3x-10}{x^{2}-10x+25} = -\infty$ 
+    (tidak ada)
+\end{enumerate}
+\vspace{0.1cm}
+\textbf{Catatan}:\\
+Teorema-teorema limit yang sering digunakan ada pada Bab 1.3 buku rujukan \cite{valberg}
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Akan dicari $f'(0)$ (jika ada) dengan.
+\[
+f(x) = 
+\begin{cases}
+    x+1, &\text{jika $x \geq 0$}\\
+    x^{2}+1, &\text{jika $x < 0$}
+\end{cases}
+\]
+Gunakan definisi limit dari turunan dimana
+\[
+f'(x) = \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
+\]
+Karena $f$ adalah fungsi \textit{pointwise} yang belum tentu memiliki turunan 
+di $x=0$, akan dicari $f'(0)$ dengan mencari limit kiri dan limit kanan definisi 
+limit turunannya.
+
+Akan dicari $\ds \lim_{h\to 0^{-}} \frac{f(0+h)-f(0)}{h}$
+\begin{align*}
+    \lim_{h\to 0^{-}} \frac{f(0+h)-f(0)}{h}
+    &= \lim_{h\to 0^{-}} \frac{f(h)-(0+1)}{h}
+    &\text{subtitusi ke dalam fungsi}\\
+    &= \lim_{h\to 0^{-}} \frac{h^{2}+1-1}{h}
+    &\text{subtitusi ke dalam fungsi}\\
+    &= \lim_{h\to 0^{-}} \frac{h^{2}}{h}
+    &\text{sederhanakan}\\
+    &= \lim_{h\to 0^{-}} h = 0
+    &\text{kalikan $\frac{1/h}{1/h}$}
+\end{align*}
+
+Selanjutnya dicari $\ds \lim_{h\to 0^{+}} \frac{f(0+h)-f(0)}{h}$
+\begin{align*}
+    \lim_{h\to 0^{+}} \frac{f(0+h)-f(0)}{h}
+    &= \lim_{h\to 0^{+}} \frac{f(h)-(0+1)}{h}
+    &\text{subtitusi ke dalam fungsi}\\
+    &= \lim_{h\to 0^{+}} \frac{h+1-1}{h}
+    &\text{subtitusi ke dalam fungsi}\\
+    &= \lim_{h\to 0^{+}} \frac{h}{h}
+    &\text{sederhanakan}\\
+    &= \lim_{h\to 0^{+}} 1 = 1
+    &\text{kalikan $\frac{1/h}{1/h}$}
+\end{align*}
+
+Perhatikan bahwa
+\[
+\lim_{h\to 0^{-}} \frac{f(0+h)-f(0)}{h} = 0 
+\neq 1 = \lim_{h\to 0^{+}} \frac{f(0+h)-f(0)}{h}
+\]
+sehingga $\ds \lim_{h\to 0} \frac{f(0+h)-f(0)}{h} = f'(0)$ tidak ada.
+
+$\therefore$ $f'(0)$ tidak ada.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Akan dicari kemiringan garis singgung dari kurva $\cos (xy^{2})-\sin y = x$ di 
+titik $(x,y) = (1,0)$.\\
+Kemiringan garis singgung kurva dapat dicari dengan mencari nilai turunan dari kurva 
+pada titik singgung. Pada soal ini titik tersebut adalah $(x,y) = (1,0)$, sehingga 
+cukup mencari nilai turunan pertama kurva pada titik tersebut.\\
+Gunakan metode untuk mencari turunan secara implisit dan aturan rantai.
+\begin{align*}
+    &\drv{x}{\cos (xy^{2})-\sin y} = \drv{x}{x}\\
+    \iff &\drv{x}{\cos (xy^{2})} - \drv{x}{\sin y} = 1
+    &\text{sifat linear turunan}\\
+    \iff &\bracket*{-\sin(xy^{2})\drv{x}{xy^{2}}}
+    -\bracket*{\cos y \drv{x}{y}} = 1
+    &\text{aturan rantai}\\
+    \iff &\bracket*{-\sin (xy^{2})\bracket*{y^{2}+xyy'}} 
+    -\bracket*{\cos (y) y'} = 1
+    &\text{aturan perkalian}
+\end{align*}
+Sekarang subtitusi $(x,y)=(1,0)$ untuk memperoleh nilai $y'$.
+\begin{align*}
+    &\bracket*{-\sin (xy^{2})\bracket*{y^{2}+xyy'}} - \bracket*{\cos (y) y'} = 1\\
+    \iff &\bracket*{-\sin (1\cdot 0^{2})\bracket*{0^{2}+1\cdot 0\cdot y'}} - \bracket*{\cos (0) y'} = 1\\
+    \iff &\bracket*{-\sin(0)(0)} - \bracket*{(1)y'} = 1\\
+    \iff &-y' = 1 \iff y'=-1
+\end{align*}
+Diperoleh nilai turunan di titik $(x,y) = (1,0)$ adalah $-1$ sehingga kemiringan 
+garis singgung kurva di titik tersebut adalah $-1$
+
+$\therefore$ Kemiringan garis singgung kurva pada titik $(x,y) = (1,0)$ adalah $-1$.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+
+\item Akan dicari cepat pertambahan luas daerah yang dijalani riak-lingkaran ketika 
+jari-jarinya $10$ cm.\\
+Misalkan $L=$ luas daerah riak-lingkaran dan $r=$ jari-jari riak-lingkaran.\\
+Informasi yang diberikan soal adalah cepat pertambahan jari-jari riak-lingkaran yang 
+konstan sehingga 
+\[\drv{t}{r} = 3\]
+Cepat pertambahan luas daerah adalah $\drvL{t}{L}$. Karena $L$ adalah luas 
+riak-lingakaran maka 
+\begin{center}
+    $L = \pi r^{2}$ dan $\ds \drv{r}{L} = 2\pi r$
+\end{center}
+Dengan aturan rantai maka
+\[
+\drv{t}{L} = \drv{r}{L}\cdot\drv{t}{r} = 2\pi r \cdot 3 = 6\pi r
+\]
+Sehingga $\drvL{t}{L}$ saat $r=10$ adalah $60\pi$
+
+$\therefore$ Cepat pertambahan luas daerah yang dijalani riak-lingkaran ketika 
+jari-jarinya $10$ cm adalah $60\pi$ cm$^{2}$/detik.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+
+\item 
+Akan dicari nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^{2}}$ pada 
+interval $\cintervalc*{-1,2}$.\\
+Carilah titik kritis dan uji nilai fungsi pada setiap titik tersebut untuk menemukan 
+titik ekstrim.\\
+Titik kritis terjadi pada
+\begin{enumerate}[label={\arabic*})]
+    \item Ujung interval
+    \item Titik stasioner (saat $f'(c)=0$)
+    \item Titik singular (saat $f'(c)$ tidak ada)
+\end{enumerate}
+Dengan demikian ujung interval $x=-1,2$ adalah titik kritis. Karena $f'(c)$ ada 
+untuk semua $x$ pada interval $\cintervalc*{-1,2}$ maka tidak ada titik singular. Terakhir akan 
+dicari titik stasioner.\\
+Pertama akan dicari $f'(t)$ 
+\begin{align*}
+    f'(t) = \drv{t}{t\sqrt{4-t^{2}}} 
+    &= \drv{t}{t\bracket*{4-t^{2}}^{1/2}}
+    &\text{penyederhanaan}\\
+    &= \bracket*{4-t^2}^{1/2}+t\bracket*{\frac{1}{2}\bracket*{4-t^{2}}^{-1/2}\cdot\drv{t}{4-t^{2}}}
+    &\text{aturan perkalian \& rantai}\\
+    &= \sqrt{4-t^{2}}+t\bracket*{\frac{1}{2\sqrt{4-t^{2}}}\cdot (-2t)}
+    &\text{penyederhanaan}\\
+    &= \frac{4-t^{2}-t^{2}}{\sqrt{4-t^{2}}}
+    &\text{penyederhanaan}\\
+    &= \frac{4-2t^{2}}{\sqrt{4-t^{2}}}
+    &\text{penyederhanaan}
+\end{align*}
+Sehingga saat $f'(c)=0$ maka
+\begin{align*}
+    f'(c) &= \frac{4-2c^{2}}{\sqrt{4-c^{2}}} = 0\\
+    \iff &4-2c^{2} = 0
+    &\text{kedua ruas kalikan $\sqrt{4-c^{2}}$}\\
+    \iff &-2c^{2} = -4
+    &\text{kedua ruas ditambah $-4$}\\
+    \iff &c^2 = 2
+    &\text{kedua ruas kalikan $-\frac{1}{2}$}\\
+\end{align*}
+Nilai $c$ yang memenuhi adalah $c=-\sqrt{2}, \sqrt{2}$. Abaikan $-\sqrt{2}$ karena 
+tidak terletak di interval $\cintervalc{-1,2}$ dan diperoleh titik stasioner 
+$c = \sqrt{2}$.\\
+Diperoleh tiga titik kritis $x = -1,\sqrt{2},2$.\\
+Evaluasi fungsi pada ketiga titik tersebut diperoleh $f(-1) = -\sqrt{3}$, 
+$f(\sqrt{2})=2$ dan $f(2) = 0$. Dengan demikian, titik maksimum terjadi pada 
+$x = \sqrt{2}$ dan titik minimum terjadi pada $x = -1$
+
+$\therefore$ Nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^2}$ pada 
+interval $\cintervalc{-1,2}$ adalah $2$ $\bracket*{\text{saat $x = \sqrt{2}$}}$ 
+dan $-\sqrt{3}$ $\bracket*{\text{saat $x = -1$}}$.
+\end{enumerate}
+\begin{center}
+    \line(1,0){300}
+\end{center}
