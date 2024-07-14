@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1720927498.61551 "c:/Users/User/Desktop/books_maTEX/books_maTEX/Kalkulus 1/kalkulus_1_2020.tex" "kalkulus_1_2020.pdf" "kalkulus_1_2020" 1720927499.7649 0
+["pdflatex"] 1720928614.35527 "c:/Users/User/Desktop/books_maTEX/books_maTEX/Kalkulus 1/kalkulus_1_2020.tex" "kalkulus_1_2020.pdf" "kalkulus_1_2020" 1720928615.66539 0
   "C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1720670062 91443 9acc1b138ca7f608e1e7f311f7105b87 ""
   "C:/Users/User/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1720403736 24224573 ebe94d3939db26fe88fa85aa894ae5c1 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/carlito/crlt_ys3vdn.enc" 1664973907 3036 b1e8e675b66735cd359ae1785943f688 ""
@@ -218,11 +218,11 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "c:/Users/User/Desktop/books_maTEX/books_maTEX/Kalkulus 1/kalkulus_1_2020.tex" 1720927249 2432 82f6c38f1b448de265d932fc4b0f19b9 ""
-  "kalkulus_1_2020.aux" 1720927499 214 4622666c10475439e5b81827d5e124c1 "pdflatex"
-  "kalkulus_1_2020.out" 1720927499 100 73a4eec5ed25b0a62eaedcc6e0c52ac0 "pdflatex"
+  "kalkulus_1_2020.aux" 1720928615 214 4622666c10475439e5b81827d5e124c1 "pdflatex"
+  "kalkulus_1_2020.out" 1720928615 100 73a4eec5ed25b0a62eaedcc6e0c52ac0 "pdflatex"
   "kalkulus_1_2020.tex" 1720927249 2432 82f6c38f1b448de265d932fc4b0f19b9 ""
-  "uts_2021/uts_2021.aux" 1720927499 713 cfaa473ee2ad3bffc52857cc9ecf2a92 "pdflatex"
-  "uts_2021/uts_2021.tex" 1720927494 14709 7dcb0a199599251eafcec080fb4218cc ""
+  "uts_2021/uts_2021.aux" 1720928615 713 cfaa473ee2ad3bffc52857cc9ecf2a92 "pdflatex"
+  "uts_2021/uts_2021.tex" 1720928613 14876 3a95f6bee80cd4f94e335409388fb708 ""
   (generated)
   "kalkulus_1_2020.aux"
   "kalkulus_1_2020.log"
