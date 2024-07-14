@@ -1,3 +1,7 @@
-Kalkulus 1/kalkulus_1_2020.log
-Kalkulus 1/kalkulus_1_2020.out
-Kalkulus 1/kalkulus_1_2020.fdb_latexmk
+*.log
+*.aux
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.out
+*.pdf
