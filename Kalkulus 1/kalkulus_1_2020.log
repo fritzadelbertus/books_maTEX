@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.8)  14 JUL 2024 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.7.8)  14 JUL 2024 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/User/Desktop/maTEX/books/Kalkulus 1/kalkulus_1_2020.tex"
-(c:/Users/User/Desktop/maTEX/books/Kalkulus 1/kalkulus_1_2020.tex
+**"c:/Users/User/Desktop/books_maTEX/books_maTEX/Kalkulus 1/kalkulus_1_2020.tex"
+(c:/Users/User/Desktop/books_maTEX/books_maTEX/Kalkulus 1/kalkulus_1_2020.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\User\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -743,17 +743,17 @@ Package rerunfilecheck Info: File `kalkulus_1_2020.out' has not changed.
 (rerunfilecheck)             Checksum: 73A4EEC5ED25B0A62EAEDCC6E0C52AC0;100.
  ) 
 Here is how much of TeX's memory you used:
- 33943 strings out of 474486
- 793570 string characters out of 5744228
+ 33945 strings out of 474486
+ 793740 string characters out of 5744228
  1951542 words of memory out of 5000000
  55612 multiletter control sequences out of 15000+600000
  627716 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,14n,107p,783b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,14n,107p,795b,906s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/google/carlito/Crlt-Bold.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/google/carlito/Crlt-Italic.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/google/carlito/Crlt-Regular.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/User/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on kalkulus_1_2020.pdf (8 pages, 165233 bytes).
+Output written on kalkulus_1_2020.pdf (8 pages, 165617 bytes).
 PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 159 PDF objects out of 1000 (max. 8388607)
+ 57 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
