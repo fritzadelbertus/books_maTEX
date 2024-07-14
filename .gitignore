@@ -1,6 +1,6 @@
-Kalkulus 1/*.synctex.gz
-*.out
-Kalkulus 1/*.log
-*.fls
-*.fdb_latexmk
-*.aux
+**.synctex.gz
+**.out
+**.log
+**.fls
+**.fdb_latexmk
+**.aux
