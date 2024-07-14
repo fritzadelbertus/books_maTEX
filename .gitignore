@@ -1,7 +1,7 @@
-**/*.synctex.gz
-**/*.out
-**/*.log
-**/*.fls
-**/*.fdb_latexmk
-**/*.aux
-Kalkulus 1/kalkulus_1_2020.synctex.gz
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
