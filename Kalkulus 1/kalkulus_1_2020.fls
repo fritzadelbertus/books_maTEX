@@ -1,6 +1,6 @@
-PWD c:\Users\User\Desktop\maTEX\books\Kalkulus 1
+PWD c:\Users\User\Desktop\books_maTEX\books_maTEX\Kalkulus 1
 INPUT C:\Users\User\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\User\Desktop\maTEX\books\Kalkulus 1\kalkulus_1_2020.tex
+INPUT c:\Users\User\Desktop\books_maTEX\books_maTEX\Kalkulus 1\kalkulus_1_2020.tex
 OUTPUT kalkulus_1_2020.log
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
