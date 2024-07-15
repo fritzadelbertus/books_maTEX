@@ -58,7 +58,7 @@ real $x$.
 \item Diketahui panjang jalan antara kota $A$ dan kota $B$ adalah $100$ km, dengan 
 batas kecepatan tempuh adalah $100$ km/jam. Misalkan mobil $X$ berangkat dari kota 
 $A$ menuju kota $B$ pada jam keberangkatan yang sama dengan mobil $Y$ berangkat 
-dari kotab $B$ menuju kota $A$. Kedua mobil berpapasan disuatu titik setelah 
+dari kota $B$ menuju kota $A$. Kedua mobil berpapasan disuatu titik setelah 
 menempuh 30 menit waktu perjalanan.
 \begin{enumerate}[label={\alph*}.]
     \item Tunjukkan bahwa salah satu mobil memiliki kecepatan tempuh melebihi $100$ 
@@ -462,12 +462,209 @@ hanya akan membuang waktu.
             \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (3.46410,3){};
         \end{axis}
         \end{tikzpicture}
-        \end{center}
+    \end{center}
         $\therefore$ Telah disketsa grafik $h(x)$ seperti gambar diatas.
 \end{enumerate}
-Diketahui volume tangki $1125$ cm$^3$ dengan alas persegi bersisi $x$ cm dan kedalaman $y$ cm.
+
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Misalkan $V$ adalah volume tangki. Maka $V = x \cdot x \cdot y = 1125$ cm$^{3}$.
+Diperoleh
+\[
+x^{2}y = 1125 \iff y = \frac{1125}{x^{2}}
+\]
+Fungsi yang ingin diminimumkan adalah fungsi biaya total 
+$C = 5(x^{2}+4xy)+10xy=5x^{2}+30xy$. Subtitusi persamaan sebelumnya diperoleh
+\[
+C = 5x^{2}+30xy = 5x^{2}+30x\bracket*{\frac{1125}{x^{2}}} = 5x^{2}+\frac{33750}{x}
+\]
+Akan dicari titik kritis dari $C$. $C$ tidak memiliki titik singular karena titik 
+tersebut hanya terjadi saat $x = 0$, dan $x=0$ tidak berada di domain $C$ karena akan 
+berkontradiksi dengan volume tangki. $C$ juga tidak memiliki batas interval, sehingga titik 
+kritis $C$ hanya terjadi saat $C'(x)=0$.
+Sehingga
+\begin{align*}
+    C'(x) = 0 \iff &\drv{x}{5x^{2}+\frac{33750}{x}} = 0\\
+    \iff & 10x+\bracket*{(-1)\frac{33750}{x^{2}}} = 0\\
+    \iff &x-\frac{3375}{x^{2}} = 0\\
+    \iff &x^{3}-3375=0\\
+    \iff &x = 15
+\end{align*}
+Sehingga $x=15$ adalah titik kritis $C$, dapat ditunjukkan bahwa ini adalah titik minimum 
+dengan uji turunan kedua
+\begin{align*}
+    C''(x) &= \drv{x}{10x-\frac{33750}{x^{2}}}\\
+    &= 10 - \bracket*{(-2)\frac{33750}{x^{3}}}\\
+    &= 10 + \frac{2\cdot 33750}{x^{3}}
+\end{align*}
+Subtitusi $x=15 \iff x^{3} = 3375$ didapat
+\[
+C''(15) = 10+\frac{2\cdot 33750}{3375} = 10 + 20 = 30 > 0
+\]
+Karena $C''(15)>0$ maka dengan uji turunan kedua titik ini adalah titik minimum.\\
+Subtitusi $y = 1125/x^{2} = 1125/15^{2} = 5$.
+
+$\therefore$ Ukuran $x$ dan $y$ yang meminimumkan biaya adalah $x=15$ cm dan $y=5$ cm.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+
+\item Diberikan fungsi
+\[
+    f(x)=
+    \begin{cases}
+        ax+5b, &x \leq 0,\\
+        x^2+3a-b, &0 < x \leq 2,\\
+        3x-5, &x > 2.
+    \end{cases}
+\]
+Akan dicari nilai $a$ dan $b$ sehingga fungsi tersebut kontinu di setiap bilangan real $x$.
+Bagian pertama dari fungsi \textit{pointwise} ini adalah bentuk linear, kedua kuadratik, 
+dan yang ketiga juga linear. Ketiganya kontinu di setiap bilangan real. 
+Sehingga titik yang mungkin menyebabkan diskontinuitas hanya di $x=0$ dan $x=2$.
+
+Tiga syarat untuk membuktikan $f$ kontinu di $x=c$ adalah
+\begin{enumerate}[label={\arabic*}.]
+    \item $\lim_{x\to c} f(x)$ ada.
+    \item $f(c)$ ada.
+    \item $\lim_{x\to c} f(x) = f(c)$
+\end{enumerate}
+Karena fungsi $f$ diharapkan kontinu di setiap bilangan real, diasumsikan $f$ 
+juga memenuhi ketiga syarat diatas untuk setiap bilangan real. Maka dari syarat pertama 
+$\lim_{x\to 0} f(x)$ ada. Jika limitnya ada maka limit kanan dan kirinya ada dan 
+\[
+\lim_{x\to 0^{-}} f(x) = \lim_{x\to 0^{+}} f(x)
+\]
+sehingga
+\begin{align*}
+    \lim_{x\to 0^{-}} f(x) = \lim_{x\to 0^{+}} f(x)
+    \iff &\lim_{x\to 0^{-}} ax+5b = \lim_{x\to 0^{+}} x^{2}+3a-b\\
+    \iff &a(0)+5b = 0^{2}+3a-b\\
+    \iff &5b = 3a-b\\
+    \iff &6b = 3a\\
+    \iff &a = 2b &...\,(1)
+\end{align*}
+Selain itu $\lim_{x\to 2} f(x)$ juga ada. Dengan cara yang sama
+\[
+\lim_{x\to 2^{-}} f(x) = \lim_{x\to 2^{+}} f(x)
+\]
+sehingga
+\begin{align*}
+    \lim_{x\to 2^{-}} f(x) = \lim_{x\to 2^{+}} f(x)
+    \iff &\lim_{x\to 2^{-}} x^{2}+3a-b = \lim_{x\to 2^{+}} 3x-5\\
+    \iff &(2)^{2}+3a-b = 3(2)-5\\
+    \iff &4+3a-b= 6-5\\
+    \iff &3a-b=-3 &...\,(2)
+\end{align*}
+Diperoleh SPL persamaan $(1)$ dan $(2)$. Subtitusi $(1)$ ke $(2)$ didapat
+\[
+3a-b= -3 \iff 3(2b)-b = -3 \iff 5b = -3 \iff b = -\frac{3}{5}
+\]
+Subtitusi balik nilai $b$ ke persamaan $(1)$ didapat
+\[
+a = 2b = 2\bracket*{-\frac{3}{5}} = -\frac{6}{5}
+\]
+Sehingga fungsi yang diharapkan kontinu adalah 
+\[
+    f(x)=
+    \begin{cases}
+        -\frac{6x+15}{5}, &x \leq 0,\\
+        x^2-3, &0 < x \leq 2,\\
+        3x-5, &x > 2.
+    \end{cases}
+\]
+Pengecekan singkat akan menunjukan bahwa fungsi ini kontinu di setiap bilangan 
+real.
+
+Saat $x=0$, $\lim_{x\to 0} f(x) = f(0)=-3$ dan $\lim_{x\to 2} f(x) = f(2)=1$
+
+$\therefore$ Diperoleh nilai $a$ dan $b$ agar fungsi ini kontinu di setiap 
+bilangan real adalah $\ds a = -\frac{6}{5}$ dan $\ds b=-\frac{3}{5}$.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item 
+\begin{enumerate}[label={\alph*}.]
+    \item Selama 30 menit perjalanan, 3 hal berikut diasumsikan berlaku 
+    \begin{enumerate}[label={\arabic*})]
+        \item Kedua mobil tidak dapat melakukan \textit{warp drive}.
+        \item Kedua mobil tidak pernah rem dadakan.
+        \item Kedua mobil berangkat dari posisi diam.
+    \end{enumerate}
+    Misalkan $h$ adalah fungsi jarak tempuh (km) kedua mobil $X$
+    dan $Y$ terhadap waktu (jam). Dari asumsi 3 maka $h(0)=0$ Karena mereka 
+    berpapasan setelah 30 menit dan jarak tempuh totalnya adalah 100 maka 
+    $h(0.5) = 100$. Untuk membuktikan salah satu mobil memiliki kecepatan 
+    tempuh melibih $100$km/jam adalah sama dengan membuktikan $h'(t) > 200$ 
+    untuk suatu $t$ di interval $[0,0.5]$.\\
+    Dari asumsi 1), maka $h$ kontinu di $[0,5]$.\\
+    Dari asumsi 2), maka $h$ differensiabel di $(0,0.5)$.\\
+    Asumsi 3), mencegah $h$ berbentuk linear.
+
+    Dengan demikian, dalam setiap kemungkinan $h$ gunakan Teorema Nilai 
+    Rata-Rata Turunan untuk memperoleh titik $c$ dimana
+    \[
+    h'(c) = \frac{h(0.5)-h(0)}{0.5-0} = \frac{100-0}{0.5} = 200
+    \]
+    Ambil satu titik misalkan $d$ dekat dengan $c$ disebelah kiri atau kanannya 
+    dan dapat dijamin bahwa $h'(d) > 200$.
+
+    Berikut ilustrasi salah satu kemungkinan $h$.
+    \begin{center}
+        \begin{tikzpicture}[>=stealth]
+        \begin{axis}[
+            xmin=-1,xmax=5,
+            ymin=-1,ymax=5,
+            axis x line=middle,
+            axis y line=middle,
+            yticklabel=\empty,
+            xticklabel=\empty,
+            axis line style=<->,
+            xlabel={$x$},
+            ylabel={$h(x)$},
+            ]
+            \addplot[no marks,blue, -] expression[domain=0:4,samples=1000]
+            {sin(deg((2*x)+4.458))+0.968+(0.5*x)};
+            \addplot[no marks,red, -] expression[domain=0:4,samples=1000]
+            {0.715*x};
+            \addplot[no marks,red, -] expression[domain=0:4,samples=1000]
+            {0.715*x+1.608};
+            \addplot[no marks,red, -] expression[domain=0:4,samples=1000]
+            {0.715*x-0.7398};
+
+            \addplot[no marks,orange, -] expression[domain=0:4,samples=1000]
+            {0.839*x+1.385};
+            \node at (4,3.1) {\scalebox{0.7}{$(0.5,100)$}};
+            \node at (1,3) {\scalebox{0.7}{$h(d) > 200$}};
+            \node at (1.525,2.4) {\scalebox{0.7}{$d$}};
+            \node at (1.64,2.6) {\scalebox{0.7}{$c$}};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (4,2.86){};
+            \node [draw, shape = circle, fill = orange, minimum size = 0.1cm, inner sep=0pt] at (1.525,2.665){};
+            \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (1.64,2.78){};
+        \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    Karena kecepatan total $h(d)$ melebihi $200$ km/jam. Maka salah satu mobil memiliki kecepatan tempuh 
+    melebihi $100$ km/jam.
+
+    $\therefore$ Telah ditunjukkan bahwa salah satu mobil memiliki kecepatan tempuh melebihi $100$ 
+    km/jam.
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Karena kecepatan mobil $X$ tidak melebihi $90$ km/jam. Maka salah satu kemungkinannya 
+    adalah mobil $X$ memiliki kecepatan $0$ km/jam. Pada kasus ini maka kecepatan maksimum mobil $Y$ 
+    adalah $\geq 200$ km/jam (karena kedua mobil berpapasan setelah 30 menit). Karena mobil $Y$ juga 
+    diasumsikan berangkat dari keadaan diam maka kecepatan sesaat mobil $Y$ berada diantara $0$ hingga 
+    kecepatan maksimumnya. Dapat disimpulkan kecepatan sesaat mobil $Y$ selama perjalanan ada di interval 
+    $[0, a]$ km/jam dimana $a \geq 200$.
+
+    $\therefore$ Kecepatan sesaat mobil $Y$ selama perjalanan berada di antara $[0,a]$ km/jam dimana 
+    $a \geq 200$.
 \end{enumerate}
 
+\end{enumerate}
 \begin{center}
     \line(1,0){300}
 \end{center}
