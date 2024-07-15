@@ -10,14 +10,14 @@
 \begin{center}
     \textbf{\large{MATERI}}
     \begin{enumerate}[leftmargin=*, label={\arabic*}.]
-        \item Menyelesaikan pertidaksamaan yang melibatkan nilai mutlak.
-        \item Mensketsa grafik fungsi.
-        \item Fungsi komposisi dan menentukan domain dan rangenya.
-        \item Mencari nilai limit kiri dan nilai limit kanan fungsi.
-        \item Mencari nilai limit fungsi di tak hingga.
-        \item Menentukan kekontinuan fungsi pada suatu titik.
         \item Menyelesaikan masalah turunan implisit.
+        \item Menyelesaikan pertidaksamaan.
+        \item Mensketsa grafik fungsi.
+        \item Fungsi komposisi dan menentukan domainnya.
+        \item Mencari nilai limit kiri dan nilai limit kanan fungsi.
+        \item Menentukan kekontinuan fungsi pada suatu titik.
         \item Menyelesaikan permasalahan maksimum dan minimum.
+        \item Teorema nilai rata-rata untuk turunan.
     \end{enumerate}
 \end{center}
 \vspace{0.2cm}
@@ -366,8 +366,104 @@ hanya akan membuang waktu.
     \]
 
     $\therefore$ $h(x) = \sqrt{x^{2}-3}$.
-
+\begin{center}
+    \line(1,0){150}
+\end{center}
     \item Akan dicari domain dari $h(x)$.
+    
+    Domain dari fungsi komposisi $h(x)=f(g(x))=\sqrt{x^{2}-3}$ adalah irisan 
+    dari domain $g(x)$ dan domain $\sqrt{x^{2}-3}$. Karena $g(x)$ adalah berbentuk 
+    polinomial maka domain naturalnya adalah bilangan real. Karena $\sqrt{x^{2}-3}$ 
+    memiliki bentuk akar kuadrat maka domainnya harus $x^{2}-3 \geq 0$.
+    
+    Selesaikan pertidaksamaan $x^{2}-3 \geq 0$. Titik beloknya adalah $x=\sqrt{3}$ 
+    dan $x=-\sqrt{3}$.
+
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[stealth-stealth] (-6,0) node[below]{$-\infty$}--(5,0) node[below]{$\infty$};
+            \draw (-6,1) --(-2,1);
+            \draw (2,1) --(5,1);
+            \draw (-2,1)--(-2,-.1) node[below=0.2em]{$-\sqrt{3}$};
+            \draw (2,1)--(2,-.1) node[below=0.2em]{$\sqrt{3}$};
+                    
+            \node at (3.5,.5) {$+$};
+            \node at (-4,.5) {$+$};
+            \node at (0,.5) {$-$};
+            \node [draw, shape = circle, fill = white, minimum size = 0.1cm, inner sep=0pt] at (2,0){};
+            \node [draw, shape = circle, fill = white, minimum size = 0.1cm, inner sep=0pt] at (-2,0){};
+        \end{tikzpicture}
+    \end{center}
+    Sehingga domain dari $\sqrt{x^{2}-3}$ adalah 
+    $\set*{x \in \mathbb{R} \mid x \leq -\sqrt{3}, x \geq \sqrt{3}}$.
+
+    Maka domain dari $h(x)$ adalah $\mathbb{R} \cap 
+    \set*{x \in \mathbb{R} \mid x \leq -\sqrt{3}, x \geq \sqrt{3}} 
+    = \set*{x \in \mathbb{R} \mid x \leq -\sqrt{3}, x \geq \sqrt{3}}$
+
+    $\therefore$ Domain dari $h(x)$ adalah 
+    $\set*{x \in \mathbb{R} \mid x \leq -\sqrt{3}, x \geq \sqrt{3}}$. 
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Akan ditunjukkan apakah $h(x)$ fungsi ganjil, genap atau tidak keduanya.
+    Pertama cari nilai $h(-x)$ dan $-h(-x)$.
+    \[
+    h(-x) = \sqrt{(-x)^{2}-3} = \sqrt{x^{2}- 3} \quad \text{dan} \quad 
+    -(h(-x)) = -\bracket*{\sqrt{x^{2}- 3}} = -\sqrt{x^{2}- 3}
+    \]   
+    Sehingga $h(x)$ adalah fungsi genap karena
+    \[
+        h(-x) =  = \sqrt{x^{2}- 3} = h(x)
+    \]
+    dan $h(x)$ bukan fungsi ganjil karena 
+    \[
+        -(h(-x)) = -\sqrt{x^{2}- 3} \neq \sqrt{x^{2}- 3} = h(x)
+    \]
+
+    $\therefore$ $h(x)$ adalah fungsi genap.
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Akan disketsa grafik fungsi $h$.\\
+    3 tahap sketsa grafik adalah:
+    \begin{enumerate}[label={\arabic*})]
+        \item Cari beberapa titik koordinat $(x,f(x))$.
+        \item Plot titik pada bidang
+        \item Hubungkan titik-titik menjadi sebuah kurva
+    \end{enumerate}
+    Karena $h$ adalah fungsi genap, maka $h$ simetri terhadap sumbu-$y$.
+    Sehingga dapat dicari beberapa titik koordinat $(x,h(x)$ dimana 
+    $x \geq \sqrt{3}$, sketsa dan cerminkan terhadap sumbu-$y$.
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}\hline
+        $x$ & $\sqrt{3}$ & $2$ & $\sqrt{7}$ & $\sqrt{12}$ \\ \hline
+        $h(x)$ & $0$ & $1$ & $2$ & $3$ \\ \hline
+    \end{tabular}
+    \end{center}
+    Plot ketiga titik tersebut dalam bidang kartesian dan hubungkan, lalu cerminkan
+    terhadap sumbu-$y$ sehingga diperolah grafik seperti berikut.
+    \begin{center}
+        \begin{tikzpicture}[>=stealth]
+        \begin{axis}[
+            xmin=-4,xmax=4,
+            ymin=-4,ymax=4,
+            axis x line=middle,
+            axis y line=middle,
+            axis line style=<->,
+            xlabel={$x$},
+            ylabel={$y$},
+            ]
+            \addplot[no marks,blue, <-] expression[domain=-3.75:-1.732,samples=100]{sqrt(x^2-3)};
+            \addplot[no marks,blue, ->] expression[domain=1.7320508:3.75,samples=100]{sqrt(x^2-3)};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (1.7320508,0){};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (2,1){};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (2.64575,2){};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (3.46410,3){};
+        \end{axis}
+        \end{tikzpicture}
+        \end{center}
+        $\therefore$ Telah disketsa grafik $h(x)$ seperti gambar diatas.
 \end{enumerate}
 \end{enumerate}
 
