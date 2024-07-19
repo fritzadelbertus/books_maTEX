@@ -20,6 +20,7 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usepackage{pgffor}
 
 % ==== Import Styling Packages =====
 \usepackage{enumitem}
@@ -37,14 +38,14 @@
 % ==== Custom Declarations =====
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-\DeclarePairedDelimiter\cintervalc{[ }{] }
-\DeclarePairedDelimiter\ointervalc{( }{] }
-\DeclarePairedDelimiter\cintervalo{[ }{) }
-\DeclarePairedDelimiter\ointervalo{( }{) }
+\DeclarePairedDelimiter\cic{[ }{] }
+\DeclarePairedDelimiter\oic{( }{] }
+\DeclarePairedDelimiter\cio{[ }{) }
+\DeclarePairedDelimiter\oio{( }{) }
 \DeclarePairedDelimiter\set{\{ }{\} }
-\DeclarePairedDelimiter\bracket{(}{)}
-\newcommand{\drv}[2]{\frac{d}{d#1}\bracket*{#2}}
-\newcommand{\drvL}[2]{D_{#1}\bracket*{#2}}
+\DeclarePairedDelimiter\brk{(}{)}
+\newcommand{\drv}[2]{\frac{d}{d#1}\brk*{#2}}
+\newcommand{\drvL}[2]{D_{#1}\brk*{#2}}
 \newcommand{\ds}{\displaystyle}
 
 % ===== Cover Setup =====
@@ -77,15 +78,14 @@ contents={%
 % \newpage
 % \tableofcontents
 
-% \include{kuis_1_2020/kuis_1_2020}
-% \include{kuis_1_2021/kuis_1_2021}
-% \include{kuis_1_2022/kuis_1_2022}
-% \include{kuis_1_2023/kuis_1_2023}
-% \include{uts_2020/uts_2020}
-% \include{uts_2021/uts_2021}
+\include{kuis_1_2020/kuis_1_2020}
+\include{kuis_1_2021/kuis_1_2021}
+\include{kuis_1_2022/kuis_1_2022}
+\include{kuis_1_2023/kuis_1_2023}
+\include{uts_2020/uts_2020}
+\include{uts_2021/uts_2021}
 \include{uts_2022/uts_2022}
-% \include{uts_2023/uts_2023}
-
+\include{uts_2023/uts_2023}
 
 \begin{thebibliography}{9}
 \bibitem{valberg}

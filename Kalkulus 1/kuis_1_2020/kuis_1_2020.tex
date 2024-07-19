@@ -49,7 +49,7 @@ riak-lingkaran tersebut bertambah dengan laju konstan 3 cm/detik. Seberapa cepat
 pertambahan \textbf{luas daerah} yang dijalani riak-lingkaran tersebut ketika 
 jari-jari riak-lingkaran tersebut 10 cm?
 \item Tentukanlah nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^{2}}$ 
-pada interval $I = \cintervalc*{-1,2}$
+pada interval $I = \cic*{-1,2}$
 \end{enumerate}
 \vspace{0.2cm}
 \hrule height 1pt
@@ -160,11 +160,11 @@ Himpunan penyelesaiannya adalah gabungan semua nilai $x$ yang memenuhi
 pertidaksamaan. Sehingga himpunan tersebut adalah 
 $\set*{x < -1 \cup -1 \leq x \leq -\frac{1}{4}}$ 
 atau $\set*{x \in \mathbb{R} \mid x \leq -\frac{1}{4}}$
-atau $\ointervalc*{-\infty,-\frac{1}{4}}$
+atau $\oic*{-\infty,-\frac{1}{4}}$
 
 $\therefore$ Himpunan penyelesaian dari $\abs{2x-1} \geq 2\abs{x+1}$
 adalah $\set*{x \in \mathbb{R} \mid x \leq -\frac{1}{4}}$
-atau $\ointervalc*{-\infty,-\frac{1}{4}}$
+atau $\oic*{-\infty,-\frac{1}{4}}$
 
 \vspace{0.1cm}
 \textbf{Catatan:}\\
@@ -282,18 +282,18 @@ Gunakan metode untuk mencari turunan secara implisit dan aturan rantai.
     &\drv{x}{\cos (xy^{2})-\sin y} = \drv{x}{x}\\
     \iff &\drv{x}{\cos (xy^{2})} - \drv{x}{\sin y} = 1
     &\text{sifat linear turunan}\\
-    \iff &\bracket*{-\sin(xy^{2})\drv{x}{xy^{2}}}
-    -\bracket*{\cos y \drv{x}{y}} = 1
+    \iff &\brk*{-\sin(xy^{2})\drv{x}{xy^{2}}}
+    -\brk*{\cos y \drv{x}{y}} = 1
     &\text{aturan rantai}\\
-    \iff &\bracket*{-\sin (xy^{2})\bracket*{y^{2}+xyy'}} 
-    -\bracket*{\cos (y) y'} = 1
+    \iff &\brk*{-\sin (xy^{2})\brk*{y^{2}+xyy'}} 
+    -\brk*{\cos (y) y'} = 1
     &\text{aturan perkalian}
 \end{align*}
 Sekarang subtitusi $(x,y)=(1,0)$ untuk memperoleh nilai $y'$.
 \begin{align*}
-    &\bracket*{-\sin (xy^{2})\bracket*{y^{2}+xyy'}} - \bracket*{\cos (y) y'} = 1\\
-    \iff &\bracket*{-\sin (1\cdot 0^{2})\bracket*{0^{2}+1\cdot 0\cdot y'}} - \bracket*{\cos (0) y'} = 1\\
-    \iff &\bracket*{-\sin(0)(0)} - \bracket*{(1)y'} = 1\\
+    &\brk*{-\sin (xy^{2})\brk*{y^{2}+xyy'}} - \brk*{\cos (y) y'} = 1\\
+    \iff &\brk*{-\sin (1\cdot 0^{2})\brk*{0^{2}+1\cdot 0\cdot y'}} - \brk*{\cos (0) y'} = 1\\
+    \iff &\brk*{-\sin(0)(0)} - \brk*{(1)y'} = 1\\
     \iff &-y' = 1 \iff y'=-1
 \end{align*}
 Diperoleh nilai turunan di titik $(x,y) = (1,0)$ adalah $-1$ sehingga kemiringan 
@@ -329,7 +329,7 @@ jari-jarinya $10$ cm adalah $60\pi$ cm$^{2}$/detik.
 
 \item 
 Akan dicari nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^{2}}$ pada 
-interval $\cintervalc*{-1,2}$.\\
+interval $\cic*{-1,2}$.\\
 Carilah titik kritis dan uji nilai fungsi pada setiap titik tersebut untuk menemukan 
 titik ekstrim.\\
 Titik kritis terjadi pada
@@ -339,16 +339,16 @@ Titik kritis terjadi pada
     \item Titik singular (saat $f'(c)$ tidak ada)
 \end{enumerate}
 Dengan demikian ujung interval $x=-1,2$ adalah titik kritis. Karena $f'(c)$ ada 
-untuk semua $x$ pada interval $\cintervalc*{-1,2}$ maka tidak ada titik singular. Terakhir akan 
+untuk semua $x$ pada interval $\cic*{-1,2}$ maka tidak ada titik singular. Terakhir akan 
 dicari titik stasioner.\\
 Pertama akan dicari $f'(t)$ 
 \begin{align*}
     f'(t) = \drv{t}{t\sqrt{4-t^{2}}} 
-    &= \drv{t}{t\bracket*{4-t^{2}}^{1/2}}
+    &= \drv{t}{t\brk*{4-t^{2}}^{1/2}}
     &\text{penyederhanaan}\\
-    &= \bracket*{4-t^2}^{1/2}+t\bracket*{\frac{1}{2}\bracket*{4-t^{2}}^{-1/2}\cdot\drv{t}{4-t^{2}}}
+    &= \brk*{4-t^2}^{1/2}+t\brk*{\frac{1}{2}\brk*{4-t^{2}}^{-1/2}\cdot\drv{t}{4-t^{2}}}
     &\text{aturan perkalian \& rantai}\\
-    &= \sqrt{4-t^{2}}+t\bracket*{\frac{1}{2\sqrt{4-t^{2}}}\cdot (-2t)}
+    &= \sqrt{4-t^{2}}+t\brk*{\frac{1}{2\sqrt{4-t^{2}}}\cdot (-2t)}
     &\text{penyederhanaan}\\
     &= \frac{4-t^{2}-t^{2}}{\sqrt{4-t^{2}}}
     &\text{penyederhanaan}\\
@@ -366,7 +366,7 @@ Sehingga saat $f'(c)=0$ maka
     &\text{kedua ruas kalikan $-\frac{1}{2}$}\\
 \end{align*}
 Nilai $c$ yang memenuhi adalah $c=-\sqrt{2}, \sqrt{2}$. Abaikan $-\sqrt{2}$ karena 
-tidak terletak di interval $\cintervalc{-1,2}$ dan diperoleh titik stasioner 
+tidak terletak di interval $\cic{-1,2}$ dan diperoleh titik stasioner 
 $c = \sqrt{2}$.\\
 Diperoleh tiga titik kritis $x = -1,\sqrt{2},2$.\\
 Evaluasi fungsi pada ketiga titik tersebut diperoleh $f(-1) = -\sqrt{3}$, 
@@ -374,8 +374,8 @@ $f(\sqrt{2})=2$ dan $f(2) = 0$. Dengan demikian, titik maksimum terjadi pada
 $x = \sqrt{2}$ dan titik minimum terjadi pada $x = -1$
 
 $\therefore$ Nilai maksimum dan nilai minimum fungsi $f(t)=t\sqrt{4-t^2}$ pada 
-interval $\cintervalc{-1,2}$ adalah $2$ $\bracket*{\text{saat $x = \sqrt{2}$}}$ 
-dan $-\sqrt{3}$ $\bracket*{\text{saat $x = -1$}}$.
+interval $\cic{-1,2}$ adalah $2$ $\brk*{\text{saat $x = \sqrt{2}$}}$ 
+dan $-\sqrt{3}$ $\brk*{\text{saat $x = -1$}}$.
 \end{enumerate}
 \begin{center}
     \line(1,0){300}
