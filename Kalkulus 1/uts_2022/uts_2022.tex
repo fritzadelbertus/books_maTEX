@@ -64,20 +64,20 @@
     \]
     Diketahui pula rumus keliling adalah
     \[
-    K = 2(x+y) = 2\bracket*{x+\frac{50}{x}}
+    K = 2(x+y) = 2\brk*{x+\frac{50}{x}}
     \]
     \begin{enumerate}[label={\roman*}.]
         \item Akan dicari laju keliling ketika panjang salah satu sisinya adalah $10$ cm.
         
         Dengan rumus keliling maka dengan mendiferensialkan kedua ruas diperoleh
         \begin{align*}
-            \frac{dK}{dt} &= \drv{t}{2\bracket*{x+\frac{50}{x}}}\\
-            &=2\bracket*{\frac{dx}{dt}+(-1)\frac{50}{x^{2}}\frac{dx}{dt}}\\
+            \frac{dK}{dt} &= \drv{t}{2\brk*{x+\frac{50}{x}}}\\
+            &=2\brk*{\frac{dx}{dt}+(-1)\frac{50}{x^{2}}\frac{dx}{dt}}\\
         \end{align*}
         Subtitusi laju perpanjangan $\ds \frac{dx}{dt} = 2$ dan panjang $x=10$.
         \begin{align*}
-            \frac{dK}{dt} &=2\bracket*{(2)+(-1)\frac{50}{(10)^{2}}(2)}\\
-            &=2\bracket*{2-\frac{100}{100}} = 2
+            \frac{dK}{dt} &=2\brk*{(2)+(-1)\frac{50}{(10)^{2}}(2)}\\
+            &=2\brk*{2-\frac{100}{100}} = 2
         \end{align*}
 
         $\therefore$ Laju keliling ketika panjang salah satu sisinya adalah $10$ cm adalah
@@ -92,8 +92,8 @@
         ketika mencapai titik minimum. Sehingga akan dicari titik kritis dari $K$. Titik kritis 
         $K$ hanya terjadi pada titik stasioner. Sehingga
         \begin{align*}
-            &\frac{dK}{dt} =2\bracket*{\frac{dx}{dt}+(-1)\frac{50}{x^{2}}\frac{dx}{dt}}\\
-            \iff &0 = 2\bracket*{2-\frac{100}{x^{2}}}\\
+            &\frac{dK}{dt} =2\brk*{\frac{dx}{dt}+(-1)\frac{50}{x^{2}}\frac{dx}{dt}}\\
+            \iff &0 = 2\brk*{2-\frac{100}{x^{2}}}\\
             \iff &0 = 2x^{2}-100\\
             \iff &x^{2} = 50
         \end{align*}
@@ -101,12 +101,12 @@
         diabaikan karena nilai sisi $x$ harus positif. Sehingga tinggal membuktikan 
         $x=\sqrt{50}$ adalah titik minimum. Gunakan uji turunan kedua
         \begin{align*}
-            \frac{d^{2}K}{dt^{2}} &= \drv{t}{2\bracket*{2-\frac{100}{x^{2}}}}\\
+            \frac{d^{2}K}{dt^{2}} &= \drv{t}{2\brk*{2-\frac{100}{x^{2}}}}\\
             &=0-(-2)\frac{200}{x^{3}} = \frac{400}{x^{3}}\\
-            \Longrightarrow \frac{d^{2}K}{dt^{2}}\bracket*{\sqrt{50}} 
-            &=\frac{400}{\bracket*{\sqrt{50}}^{3}} > 0
+            \Longrightarrow \frac{d^{2}K}{dt^{2}}\brk*{\sqrt{50}} 
+            &=\frac{400}{\brk*{\sqrt{50}}^{3}} > 0
         \end{align*}
-        Karena $\ds \frac{d^{2}K}{dt^{2}}\bracket*{\sqrt{50}} > 0$, maka dengan uji turunan kedua 
+        Karena $\ds \frac{d^{2}K}{dt^{2}}\brk*{\sqrt{50}} > 0$, maka dengan uji turunan kedua 
         $x=\sqrt{50} = 5\sqrt{2}$ adalah titik minimum.
 
         Diperoleh nilai $x$ sehingga keliling berhenti berkurang adalah $x=5\sqrt{2}$, lalu sisi 
@@ -133,7 +133,7 @@
         &\text{aturan rantai}\\
         =\,&3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})\drv{x}{x^{2}+y^{2}}
         &\text{aturan rantai}\\
-        =\,&3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})\bracket*{2x+2y\frac{dy}{dx}}\\
+        =\,&3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})\brk*{2x+2y\frac{dy}{dx}}\\
         =\,&3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})(2x+2yy')
         \end{align*}
         \item \begin{align*}
@@ -164,7 +164,7 @@
         \frac{7+\cos y^{2}(2yy')}{x-1}-\frac{7x+\sin y^{2}}{(x-1)^{2}} = 0\\
         \iff &A(2x+2yy')+\frac{By'+7}{C}-\frac{D}{C^{2}}=0\\
         \iff &2Ax+2Ayy' + \frac{B}{C}y' + \frac{7}{C} = \frac{D}{C^{2}}\\
-        \iff &\bracket*{2Ay+\frac{B}{C}}y' = \frac{D}{C^2}-\frac{7}{C}-2Ax\\
+        \iff &\brk*{2Ay+\frac{B}{C}}y' = \frac{D}{C^2}-\frac{7}{C}-2Ax\\
         \iff &(2ACy+B)y' = \frac{D}{C}-7-2ACx\\
         \iff &(2ACy+B)y' = \frac{D-7C-2AC^{2}x}{C}\\
         \iff &y' =  \frac{D-7C-2AC^{2}x}{C(2ACy+B)}\\
@@ -172,13 +172,13 @@
     Subtitusi balik dan sederhanakan
     \begin{align*}
         y' &=  \frac{D-7C-2AC^{2}x}{C(2ACy+B)}\\
-        &= \frac{\bracket*{7x+\sin y^{2}}-7(x-1)-2
-        \bracket*{3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}(x-1)^{2}x}{
-        (x-1)\bracket*{2\bracket*{3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
+        &= \frac{\brk*{7x+\sin y^{2}}-7(x-1)-2
+        \brk*{3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}(x-1)^{2}x}{
+        (x-1)\brk*{2\brk*{3\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
         (x-1)y+2y\cos y^{2}}}\\
         &= \frac{\sin y^{2}+7-6x(x^{2}-2x+1)
-        \bracket*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}}{
-        6y(x^{2}-2x+1)\bracket*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
+        \brk*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}}{
+        6y(x^{2}-2x+1)\brk*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
         +2y(x-1)\cos y^{2}}
     \end{align*}
 
@@ -186,8 +186,8 @@
     adalah
     
     $\ds \frac{dy}{dx} = \frac{\sin y^{2}+7-6x(x^{2}-2x+1)
-    \bracket*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}}{
-    6y(x^{2}-2x+1)\bracket*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
+    \brk*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}}{
+    6y(x^{2}-2x+1)\brk*{\sin^{2}(x^{2}+y^{2})\cos(x^{2}+y^{2})}
     +2y(x-1)\cos y^{2}}$
 \end{enumerate}
 \begin{center}
@@ -227,8 +227,8 @@
     \end{center}
     Sehingga $f$ naik saat $x > 3$ dan $f$ turun saat $x < 3, x\neq 0$.
 
-    $\therefore$ Interval dimana $f$ naik adalah $\ointervalo{3, \infty}$ dan interval dimana 
-    $f$ turun adalah $\ointervalo{-\infty,0}\cup\ointervalo{0,3}$.
+    $\therefore$ Interval dimana $f$ naik adalah $\oio{3, \infty}$ dan interval dimana 
+    $f$ turun adalah $\oio{-\infty,0}\cup\oio{0,3}$.
 \begin{center}
     \line(1,0){150}
 \end{center}
@@ -281,8 +281,8 @@
     Sehingga $f$ cekung ke atas saat $x > 2 \cup x < 0$ dan $f$ cekung ke bawah saat 
     $0 < x < 2$.
 
-    $\therefore$ Interval dimana $f$ cekung ke atas adalah$\ointervalo{-\infty,0}\cup\ointervalo{2,\infty}$ 
-    dan interval dimana $f$ cekung ke bawah adalah $\ointervalo{0,2}$.
+    $\therefore$ Interval dimana $f$ cekung ke atas adalah$\oio{-\infty,0}\cup\oio{2,\infty}$ 
+    dan interval dimana $f$ cekung ke bawah adalah $\oio{0,2}$.
 \begin{center}
     \line(1,0){150}
 \end{center}

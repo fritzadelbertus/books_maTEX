@@ -51,7 +51,7 @@
     \item Tentukanlah $(g \circ f)(x)$ sedemikian sehingga rumus fungsinya tidak 
     memuat nilai mutlak, kemudian tentukanlah domain dan range dari $(g \circ f)(x)$.
     \item Apakah 
-    $\ds \floor*{(g \circ f)(0.5)} = \bracket*{\frac{g \circ f}{g}}(0.5)$? 
+    $\ds \floor*{(g \circ f)(0.5)} = \brk*{\frac{g \circ f}{g}}(0.5)$? 
     Jelaskanlah jawaban Anda!
 \end{enumerate}
 \item Diberikan fungsi $f\colon \mathbb{R} \to \mathbb{R}$ dengan $f(1)=f(-1)=1$ 
@@ -231,13 +231,13 @@ $\set*{x < -2 \cup x = 0 \cup -2 < x < 0}$
 atau \\
 $\set*{x \in \mathbb{R} \mid x < -2 \cup -2 < x \leq 0}$
 atau
-$\ointervalc*{-\infty,0} \cap \set{x \in \mathbb{R} \mid x \neq 2}$
+$\oic*{-\infty,0} \cap \set{x \in \mathbb{R} \mid x \neq 2}$
 
 $\therefore$ Himpunan penyelesaian dari 
 $\ds \abs*{\frac{x}{x+2}} \geq x$ adalah 
 $\set*{x \in \mathbb{R} \mid x < -2 \cup -2 < x \leq 0}$
 atau \\
-$\ointervalc*{-\infty,0} \cap \set{x \in \mathbb{R} \mid x \neq 2}$
+$\oic*{-\infty,0} \cap \set{x \in \mathbb{R} \mid x \neq 2}$
 
 \vspace{0.1cm}
 \textbf{Catatan:}\\
@@ -423,17 +423,17 @@ Terakhir akan dicari range dari $(g \circ f)(x)$.
 Dari kasus $\ds \frac{1}{-x^{2}+4}$ 
 karena $\ds \lim_{x\to 2^{+}} (g \circ f)(x) = -\infty$ dan 
 $\ds \lim_{x\to \infty} (g \circ f)(x) = 0$ maka 
-$\ointervalo{-\infty,0}$ adalah bagian dari range $g \circ f$.\\
+$\oio{-\infty,0}$ adalah bagian dari range $g \circ f$.\\
 Dari kasus $\ds \frac{1}{-(x+1)}$ 
 karena $\ds \lim_{x\to -1^{-}} (g \circ f)(x) = \infty$ dan 
 $\ds \lim_{x\to -\infty} (g \circ f)(x) = 0$ maka 
-$\ointervalo{0,\infty}$ adalah bagian dari range $g \circ f$.
+$\oio{0,\infty}$ adalah bagian dari range $g \circ f$.
 
 Sehingga range dari $g \circ f$ sudah mencakup semua bilangan real kecuali $0$.
 Dan karena $g \circ f$ berbentuk rasional dengan penyebut bernilai satu maka $0$ 
 tidak bisa menjadi hasil dari $g \circ f$.
 
-Dengan demikian range dari $(g \circ f)(x)$ adalah $\ointervalo{-\infty,\infty} \cap x \neq 0$ 
+Dengan demikian range dari $(g \circ f)(x)$ adalah $\oio{-\infty,\infty} \cap x \neq 0$ 
 atau $\set{y \in \mathbb{R} \mid y \neq 0}$.
 
 Berikut grafik pendukung.
@@ -476,7 +476,7 @@ $\set{y \in \mathbb{R} \mid y \neq 0}$.
     \line(1,0){150}
 \end{center}
 \item Akan diuji kebenaran dari 
-$\ds \floor*{(g \circ f)(0.5)} = \bracket*{\frac{g \circ f}{g}}(0.5)$.
+$\ds \floor*{(g \circ f)(0.5)} = \brk*{\frac{g \circ f}{g}}(0.5)$.
 
 Evaluasi nilai $\floor*{(g \circ f)(0.5)}$.
 \begin{align*}
@@ -493,9 +493,9 @@ Evaluasi nilai $\floor*{(g \circ f)(0.5)}$.
     &\text{evaluasi $floor$}
 \end{align*}
 
-Evaluasi nilai $\ds \bracket*{\frac{g \circ f}{g}}(0.5)$
+Evaluasi nilai $\ds \brk*{\frac{g \circ f}{g}}(0.5)$
 \begin{align*}
-    \bracket*{\frac{g \circ f}{g}}(0.5) &= \frac{(g\circ f)(0.5)}{g(0.5)}\\
+    \brk*{\frac{g \circ f}{g}}(0.5) &= \frac{(g\circ f)(0.5)}{g(0.5)}\\
     &= \frac{g(f(0.5))}{g(0.5)} 
     &\text{definisi komposisi}\\
     &= \frac{g(\abs{0.5+1})}{g(0.5)}
@@ -509,11 +509,11 @@ Evaluasi nilai $\ds \bracket*{\frac{g \circ f}{g}}(0.5)$
 \end{align*}
 Diperoleh 
 \[
-    \floor*{(g \circ f)(0.5)} = 0 \neq \frac{1}{3} = \bracket*{\frac{g \circ f}{g}}(0.5)
+    \floor*{(g \circ f)(0.5)} = 0 \neq \frac{1}{3} = \brk*{\frac{g \circ f}{g}}(0.5)
 \]
 
 $\therefore$ 
-$\ds \floor*{(g \circ f)(0.5)} \neq \bracket*{\frac{g \circ f}{g}}(0.5)$
+$\ds \floor*{(g \circ f)(0.5)} \neq \brk*{\frac{g \circ f}{g}}(0.5)$
 \end{enumerate}
 \begin{center}
     \line(1,0){300}
@@ -654,9 +654,9 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
             &= \drv{x}{y}(x^{2}+1)^{2}+y\drv{x}{(x^{2}+1)^{2}}
             &\text{aturan perkalian}\\
             &= y'(x^{2}+1)^{2} + y\drv{x}{(x^{2}+1)^{2}}\\
-            &=y'(x^{2}+1)^{2} + y\bracket*{2(x^{2}+1)\drv{x}{x^{2}+1}}
+            &=y'(x^{2}+1)^{2} + y\brk*{2(x^{2}+1)\drv{x}{x^{2}+1}}
             &\text{aturan pangkat dan rantai}\\
-            &=y'(x^{2}+1)^{2} + y\bracket*{2(x^{2}+1)(2x)}\\
+            &=y'(x^{2}+1)^{2} + y\brk*{2(x^{2}+1)(2x)}\\
             &=y'(x^{2}+1)^{2} + 4xy(x^{2}+1)
         \end{align*}
         \item 
@@ -667,14 +667,14 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
     Sehingga 
     \begin{align*}
         &\drv{x}{xy^{2}} + \drv{x}{y(x^{2}+1)^{2}} = \drv{x}{y^{2}} + \drv{x}{x} \\
-        \iff &\bracket*{y^{2} + 2xyy'} + \bracket*{y'(x^{2}+1)^{2} 
+        \iff &\brk*{y^{2} + 2xyy'} + \brk*{y'(x^{2}+1)^{2} 
         + 4xy(x^{2}+1)}= 2yy' + 1\\
     \end{align*}
     Subtitusi $x = 0$ dan $y=1$ untuk memperoleh turunan pertama kurva di $(0,1)$.
     \begin{align*}
-        &\bracket*{y^{2} + 2xyy'} + \bracket*{y'(x^{2}+1)^{2} 
+        &\brk*{y^{2} + 2xyy'} + \brk*{y'(x^{2}+1)^{2} 
         + 4xy(x^{2}+1)}= 2yy' + 1\\
-        \iff &\bracket*{1^{2} + 2(0)(1)y'} + \bracket*{y'(0^{2}+1)^{2} 
+        \iff &\brk*{1^{2} + 2(0)(1)y'} + \brk*{y'(0^{2}+1)^{2} 
         + 4(0)(1)(x^{2}+1)}= 2(1)
         y' + 1\\
         \iff &1+0+y'+0 = 2y'+1\\
@@ -693,7 +693,7 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
     pada titik $(0,1)$. Dari soal sebelumnya, setelah 1 kali penurunan secara 
     implisit diperoleh
     \[
-        \bracket*{y^{2} + 2xyy'} + \bracket*{y'(x^{2}+1)^{2} 
+        \brk*{y^{2} + 2xyy'} + \brk*{y'(x^{2}+1)^{2} 
         + 4xy(x^{2}+1)}= 2yy' + 1
     \]
     Turunkan lagi secara implisit persamaan ini, yaitu
@@ -714,7 +714,7 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
             &= \drv{x}{2xy}y' + 2xy\drv{x}{y'}
             &\text{aturan perkalian}\\
             &= \drv{x}{2xy}y' + 2xyy''\\
-            &= \bracket*{\drv{x}{2x}y + 2x\drv{x}{y}}y' + 2xyy''
+            &= \brk*{\drv{x}{2x}y + 2x\drv{x}{y}}y' + 2xyy''
             &\text{aturan perkalian}\\
             &=(2y+2xy')y'+2xyy''
         \end{align*}
@@ -724,9 +724,9 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
             &= \drv{x}{y'}(x^{2}+1)^{2}+y'\drv{x}{(x^{2}+1)^{2}}
             &\text{aturan perkalian}\\
             &= y''(x^{2}+1)^{2} + y'\drv{x}{(x^{2}+1)^{2}}\\
-            &=y''(x^{2}+1)^{2} + y'\bracket*{2(x^{2}+1)\drv{x}{x^{2}+1}}
+            &=y''(x^{2}+1)^{2} + y'\brk*{2(x^{2}+1)\drv{x}{x^{2}+1}}
             &\text{aturan pangkat dan rantai}\\
-            &=y''(x^{2}+1)^{2} + y'\bracket*{2(x^{2}+1)(2x)}\\
+            &=y''(x^{2}+1)^{2} + y'\brk*{2(x^{2}+1)(2x)}\\
             &=y''(x^{2}+1)^{2} + 4xy'(x^{2}+1)
         \end{align*}
         \item 
@@ -736,7 +736,7 @@ dan $\ds f(x) = \frac{x^{2}-x}{x^{2}-1}$ untuk $x$ lainnya.
             &\text{aturan perkalian}\\
             &=\drv{x}{4xy}(x^{2}+1) + (4xy)(2x)\\
             &=\drv{x}{4xy}(x^{2}+1) + 8x^{2}y\\
-            &=\bracket*{\drv{x}{4x}y+4x\drv{x}{y}}(x^{2}+1)+8x^{2}y
+            &=\brk*{\drv{x}{4x}y+4x\drv{x}{y}}(x^{2}+1)+8x^{2}y
             &\text{aturan perkalian}\\
             &=(4y+4xy')(x^{2}+1)+8x^{2}y
         \end{align*}
@@ -815,16 +815,16 @@ sedemikian sehingga luas persegi panjang tersebut maksimum.
         \item Akan dicari $L'(x)$.
         \begin{align*}
             L'(x) &= \drv{x}{\sqrt{\frac{b}{a}}x\sqrt{a-x^{2}}}\\
-            &= \sqrt{\frac{b}{a}}\bracket*{\drv{x}{x}\sqrt{a-x^{2}} +x\drv{x}{\sqrt{a-x^{2}}}}\\
-            &= \sqrt{\frac{b}{a}}\bracket*{\sqrt{a-x^{2}}+x\bracket*{\frac{1}{2\sqrt{a-x^{2}}}\drv{x}{a-x^{2}}}}\\ 
-            &= \sqrt{\frac{b}{a}}\bracket*{\sqrt{a-x^{2}}+x\bracket*{\frac{1}{2\sqrt{a-x^{2}}}(-2x)}} \\
-            &= \sqrt{\frac{b}{a}}\bracket*{\sqrt{a-x^{2}}-\frac{x^{2}}{\sqrt{a-x^{2}}}}\\ 
-            &= \sqrt{\frac{b}{a}}\bracket*{\frac{a-x^{2}}{\sqrt{a-x^{2}}}-\frac{x^{2}}{\sqrt{a-x^{2}}}}
-            = \sqrt{\frac{b}{a}}\bracket*{\frac{a-2x^{2}}{\sqrt{a-x^{2}}}} 
+            &= \sqrt{\frac{b}{a}}\brk*{\drv{x}{x}\sqrt{a-x^{2}} +x\drv{x}{\sqrt{a-x^{2}}}}\\
+            &= \sqrt{\frac{b}{a}}\brk*{\sqrt{a-x^{2}}+x\brk*{\frac{1}{2\sqrt{a-x^{2}}}\drv{x}{a-x^{2}}}}\\ 
+            &= \sqrt{\frac{b}{a}}\brk*{\sqrt{a-x^{2}}+x\brk*{\frac{1}{2\sqrt{a-x^{2}}}(-2x)}} \\
+            &= \sqrt{\frac{b}{a}}\brk*{\sqrt{a-x^{2}}-\frac{x^{2}}{\sqrt{a-x^{2}}}}\\ 
+            &= \sqrt{\frac{b}{a}}\brk*{\frac{a-x^{2}}{\sqrt{a-x^{2}}}-\frac{x^{2}}{\sqrt{a-x^{2}}}}
+            = \sqrt{\frac{b}{a}}\brk*{\frac{a-2x^{2}}{\sqrt{a-x^{2}}}} 
         \end{align*}
         \item Akan dicari nilai $x$ saat $L'(x)=0$
         \begin{align*}
-            L'(x) = 0 \iff &\sqrt{\frac{b}{a}}\bracket*{\frac{a-2x^{2}}{\sqrt{a-x^{2}}}} =0\\
+            L'(x) = 0 \iff &\sqrt{\frac{b}{a}}\brk*{\frac{a-2x^{2}}{\sqrt{a-x^{2}}}} =0\\
             \iff &\frac{a-2x^{2}}{\sqrt{a-x^{2}}} = 0\\
             \iff &a-2x^{2} = 0\\
             \iff &x = \pm \sqrt{\frac{a}{2}}
@@ -833,9 +833,9 @@ sedemikian sehingga luas persegi panjang tersebut maksimum.
         $y=\sqrt{\frac{b}{a}}\sqrt{a-x^{2}}$ diperoleh
         \begin{align*}
             y&=\sqrt{\frac{b}{a}}\sqrt{a-x^{2}}\\
-            &=\sqrt{\frac{b}{a}}\sqrt{a-\bracket*{\sqrt{\frac{a}{2}}}^2}\\
+            &=\sqrt{\frac{b}{a}}\sqrt{a-\brk*{\sqrt{\frac{a}{2}}}^2}\\
             &=\sqrt{\frac{b}{a}}\sqrt{a-\frac{a}{2}}\\
-            &=\sqrt{\frac{b}{a}\bracket*{a-\frac{a}{2}}}\\
+            &=\sqrt{\frac{b}{a}\brk*{a-\frac{a}{2}}}\\
             &=\sqrt{\frac{b}{2}}
         \end{align*}
         \item Diperoleh panjang dan lebar maksimum untuk persegi panjang di kuadran 1 adalah 
