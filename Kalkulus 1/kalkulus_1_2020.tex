@@ -17,10 +17,15 @@
 % ==== Import Math Packages =====
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{mathtools}
+
+% ==== Import Plotting Packages =====
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
 \usetikzlibrary{decorations.pathreplacing,calligraphy}
 \usepackage{pgffor}
+\usepgfplotslibrary{colorbrewer}
+\usetikzlibrary{pgfplots.colorbrewer}
 
 % ==== Import Styling Packages =====
 \usepackage{enumitem}
@@ -47,6 +52,8 @@
 \newcommand{\drv}[2]{\frac{d}{d#1}\brk*{#2}}
 \newcommand{\drvL}[2]{D_{#1}\brk*{#2}}
 \newcommand{\ds}{\displaystyle}
+\newcommand{\eval}[3]{\left.\brk*{#1}\right\rvert_{#2}^{#3}}
+
 
 % ===== Cover Setup =====
 \backgroundsetup{
@@ -78,14 +85,18 @@ contents={%
 % \newpage
 % \tableofcontents
 
-\include{kuis_1_2020/kuis_1_2020}
-\include{kuis_1_2021/kuis_1_2021}
-\include{kuis_1_2022/kuis_1_2022}
-\include{kuis_1_2023/kuis_1_2023}
-\include{uts_2020/uts_2020}
-\include{uts_2021/uts_2021}
-\include{uts_2022/uts_2022}
-\include{uts_2023/uts_2023}
+% \include{kuis_1_2020/kuis_1_2020}
+% \include{kuis_1_2021/kuis_1_2021}
+% \include{kuis_1_2022/kuis_1_2022}
+% \include{kuis_1_2023/kuis_1_2023}
+% \include{uts_2020/uts_2020}
+% \include{uts_2021/uts_2021}
+% \include{uts_2022/uts_2022}
+% \include{uts_2023/uts_2023}
+\include{kuis_2_2020/kuis_2_2020}
+% \include{kuis_2_2021/kuis_2_2021}
+% \include{kuis_2_2022/kuis_2_2022}
+% \include{kuis_2_2023/kuis_2_2023}
 
 \begin{thebibliography}{9}
 \bibitem{valberg}
