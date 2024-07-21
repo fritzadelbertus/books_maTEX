@@ -172,16 +172,8 @@ Diperoleh daerah yang dibatasi seperti berikut:
         \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (2,0){};
         \node [draw, shape = circle, fill = purple, minimum size = 0.1cm, inner sep=0pt] at (-1,1){};
         \node [draw, shape = circle, fill = purple, minimum size = 0.1cm, inner sep=0pt] at (-1,-1){};
-        \addplot [
-            thick,
-            color=cyan,
-            fill=cyan, 
-            fill opacity=0.5
-        ]
-        fill between[
-            of=f and g,
-            soft clip={domain=-1:2},
-        ]; 
+        \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=-1:2},]; 
     \end{axis}
     \end{tikzpicture}
 \end{center}
@@ -241,16 +233,8 @@ Diperoleh daerah yang dibatasi seperti berikut.
         \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (-1,1){};
         \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (0,0){};
         \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (1,1){};
-        \addplot [
-            thick,
-            color=cyan,
-            fill=cyan, 
-            fill opacity=0.5
-        ]
-        fill between[
-            of=f and g,
-            soft clip={domain=-1:2},
-        ]; 
+        \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=-1:2},]; 
     \end{axis}
     \end{tikzpicture}
 \end{center}
