@@ -6,5 +6,5 @@
 *.pdf
 *.synctex.gz
 *.dat
-*.script
 *.toc
+*.script
