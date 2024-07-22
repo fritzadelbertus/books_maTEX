@@ -1,0 +1,304 @@
+\begin{flushright}
+    \section*{\Large{Kuis 2}}
+    \addcontentsline{toc}{section}{Kuis 2}
+    \subsection*{Tahun 2020}
+    \addcontentsline{toc}{subsection}{Kuis 2 - 2020}
+\end{flushright}
+\vspace{0.5cm}
+\hrule height 2pt
+\vspace{0.5cm}
+%========= ========= ========= ========= ========= ========= ========= =========|||
+\begin{center}
+    \textbf{\large{MATERI}}
+    \begin{enumerate}[leftmargin=*, label={\arabic*}.]
+        \item Sketsa grafik fungsi dan kurva.
+        \item Mencari nilai integral.
+        \item Mencari nilai integral dengan metode subtitusi.
+        \item Aplikasi integral dalam mencari luas daerah.
+        \item Aplikasi integral dalam mencari volume benda putar.
+    \end{enumerate}
+\end{center}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Misalkan
+\[
+f(x) = 
+\begin{cases}
+    \cos x, & x < 0\\
+    1-x^{2}, &x \geq 0
+\end{cases}
+\]
+\begin{enumerate}[label={\alph*}.]
+    \item Gambarlah grafik fungsi $f$ tersebut
+    \item Hitunglah $\int_{-\pi/2}^{1}f(x)\,dx$.
+\end{enumerate}
+\item Hitunglah integral berikut ini:
+    \begin{enumerate}[label={\alph*}.]
+        \item $\int_{0}^{\pi/2} \sin x \sin(\cos x) \,dx$
+        \item $\int_{2}^{10} x^{4}\cos\brk*{2x^5}\,dx$
+    \end{enumerate}
+\item Sketsalah daerah yang dibatasi oleh $x+y^2=0$ dan $x+3y^{2}=2$, 
+kemudian tentukanlah luas daerahnya.
+\item Buatlah sketsa daerah yang dibatasi oleh $y=x+2$ dan $y=x^{2}$, 
+kemudian tentukanlah volume benda putar yang terbentuk jika daerah 
+tersebut diputar mengelilingi garis $y=4$.
+\end{enumerate}
+\vspace{0.2cm}
+\hrule height 1pt
+\begin{center}
+    \textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item \begin{enumerate}[label={\alph*}.]
+    \item Uji tiga titik $x\geq 0$ ke fungsi $1-x^{2}$ dan sambungkan dengan 
+    fungsi $\cos x$ di $x < 0$.
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}\hline
+            $x$ & $0$ & $1$ & $2$ \\ \hline
+            $f(x)$ & $1$ & $0$ & $-3$ \\ \hline
+        \end{tabular}
+    \end{center}
+    Diperoleh grafik $f$ sebagai berikut.
+    \begin{center}
+        \begin{tikzpicture}[>=stealth]
+        \begin{axis}[
+            xmin=-5,xmax=3,
+            ymin=-4,ymax=2,
+            axis x line=middle,
+            axis y line=middle,
+            axis line style=<->,
+            xlabel={$x$},
+            ylabel={$f(x)$},
+            ]
+            \addplot[no marks,blue, <-] expression[domain=-5:-0.01,samples=50]{cos(deg(x))};
+            \addplot[no marks,blue, ->] expression[domain=0:2.2,samples=50]{1-(x^2)};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (0,1){};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (1,0){};
+            \node [draw, shape = circle, fill = black, minimum size = 0.1cm, inner sep=0pt] at (2,-3){};
+        \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    $\therefore$ Telah digambar grafik fungsi $f$
+\begin{center}
+    \line(1,0){150}
+\end{center}
+    \item Akan dicari $\ds \int_{-\pi/2}^{1}f(x)\,dx$
+    \begin{align*}
+        \int_{-\pi/2}^{1}f(x)\,dx &=\int_{-\pi/2}^{0} f(x)\,dx + \int_{0}^{1} f(x)\,dx\\
+        &=\int_{-\pi/2}^{0} \cos x\,dx + \int_{0}^{1} 1-x^{2}\,dx\\
+        &=\eval{\sin x}{-\pi/2}{0} + \eval{x-\frac{1}{3}x^3}{0}{1}\\
+        &=\brk*{\sin 0 - \sin\brk*{-\frac{\pi}{2}}}
+        +\brk*{\brk*{1-\frac{1}{3}(1)^3}-\brk*{0-\frac{1}{3}(0)^3}}\\
+        &=(0-(-1))+\brk*{\frac{2}{3}-0} = \frac{5}{3}
+    \end{align*}
+    
+    $\therefore$ $\ds \int_{-\pi/2}^{1}f(x)\,dx =\frac{5}{3}$
+\end{enumerate}
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Gunakan metode subtitusi untuk menyelesaikan kedua integral
+\begin{enumerate}[label={\alph*}.]
+    \item Akan dicari $\ds \int_{0}^{\pi/2} \sin x\sin(\cos x)\,dx$.\\
+    Subtitusi
+    \begin{align*}
+        &u = \cos x,&\frac{du}{dx} = -\sin x \iff -du = \sin x\,dx\\
+        &x=0 \iff u = \cos 0 = 1,&x=\frac{\pi}{2} \iff u = \cos \frac{\pi}{2} = 0
+    \end{align*}
+    Sehingga 
+    \begin{align*}
+        &\int_{0}^{\pi/2} \sin x\sin(\cos x)\,dx\\
+        =\,& \int_{0}^{\pi/2} \sin(\cos x)\sin x\,dx\\
+        =\,& \int_{1}^{0} \sin(u)\,(-du)\\
+        =\,& \int_{0}^{1} \sin(u)\,du\\
+        =\,& \eval{-\cos u}{0}{1}\\
+        =\,& \brk*{-\cos(1)-(-\cos 0)} = 1-\cos 1
+    \end{align*}
+    
+    $\therefore$ $\ds \int_{0}^{\pi/2} \sin x\sin(\cos x)\,dx = 1-\cos 1$
+    
+    \item Akan dicari $\ds \int_{2}^{10} x^{4}\cos\brk*{2x^{5}}\,dx$.\\
+    Subtitusi
+    \begin{align*}
+        &u = 2x^{5},&\frac{du}{dx} = 10x^{4} \iff \frac{du}{10} = x^{4}\,dx\\
+        &x=2 \iff u = 2\cdot2^{5},&x=10 \iff u = 2\cdot10^{5}
+    \end{align*}
+    Sehingga 
+    \begin{align*}
+        &\int_{2}^{10} x^{4}\cos\brk*{2x^{5}}\,dx\\
+        =\,& \int_{2}^{10} \cos\brk*{2x^{5}}x^{4}\,dx\\
+        =\,& \int_{2\cdot2^{5}}^{2\cdot10^{5}} \cos(u)\,\brk*{\frac{du}{10}}\\
+        =\,& \frac{1}{10}\int_{2\cdot2^{5}}^{2\cdot10^{5}} \cos(u)\,du\\
+        =\,& \frac{1}{10}\eval{\sin u}{2\cdot2^{5}}{2\cdot10^{5}}\\
+        =\,& \frac{\sin \brk*{2\cdot10^{5}}-\sin \brk*{2\cdot2^{5}}}{10}
+    \end{align*}
+
+    $\therefore$ $\ds \int_{2}^{10} x^{4}\cos\brk*{2x^{5}}\,dx
+    =\frac{\sin \brk*{2\cdot10^{5}}-\sin \brk*{2\cdot2^{5}}}{10}$
+\end{enumerate}
+\item Gunakan tiga titik dari masing-masing persamaan untuk mensketsa kurva.
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}\hline
+        $y$ & $-1$ & $0$ & $1$ \\ \hline
+        $x=-y^2$ & $-1$ & $0$ & $-1$ \\ \hline
+    \end{tabular}\quad
+    \begin{tabular}{|c|c|c|c|}\hline
+        $y$ & $-1$ & $0$ & $1$ \\ \hline
+        $x=2-3y^{2}$ & $-1$ & $2$ & $-1$ \\ \hline
+    \end{tabular}
+\end{center}
+Diperoleh daerah yang dibatasi seperti berikut:
+\begin{center}
+    \begin{tikzpicture}[>=stealth]
+    \begin{axis}[
+        xmin=-3,xmax=3,
+        ymin=-2,ymax=2,
+        axis x line=middle,
+        axis y line=middle,
+        axis line style=<->,
+        xlabel={$x$},
+        ylabel={$y$},
+        ]
+        \addplot [name path=f, no marks,blue, domain=-2:2,samples=50]({-x^2},{x});
+        \node [blue] at (-1,0.5){\scalebox{0.7}{$x+y^{2}=0$}};
+        \addplot [name path=g, no marks,red, domain=-2:2,samples=50]({2-3*x^2},{x});
+        \node [red] at (1,1){\scalebox{0.7}{$x+3y^{2}=2$}};
+        \node [draw, shape = circle, fill = blue, minimum size = 0.1cm, inner sep=0pt] at (0,0){};
+        \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (2,0){};
+        \node [draw, shape = circle, fill = purple, minimum size = 0.1cm, inner sep=0pt] at (-1,1){};
+        \node [draw, shape = circle, fill = purple, minimum size = 0.1cm, inner sep=0pt] at (-1,-1){};
+        \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=-1:2},]; 
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+Untuk menghitung luasnya, kedua persamaan akan digunakan dan diintegralkan terhadap $y$, sehingga 
+diperlukan batas atas dan bawah $y$. Pada sketsa gambar telah terlihat batas bawahnya adalah $y=-1$ dan 
+batas atasnya adalah $y=1$. Bila titik uji berbeda, carilah titik perpotongan kedua persamaan seperti berikut.
+\begin{align*}
+    x = -y^{2},\quad x = 2-3y^{2} &\Longrightarrow -y^{2}= 2-3y^{2}\\
+    &\iff 0 = 2-2y^{2}\\
+    &\iff y^{2} = 1
+\end{align*}
+Sehingga $y = 1$ dan $y=-1$ adalah titik potong kedua kurva.
+
+Gunakan integral untuk menghitung luas
+\begin{align*}
+    L &= \int_{-1}^{1} \brk*{2-3y^{2}}-\brk*{-y^{2}}\,dy\\
+    &=\int_{-1}^{1} 2-2y^{2}\,dy\\
+    &=\eval{2y-\frac{2}{3}y^{3}}{-1}{1}\\
+    &=\brk*{2(1)-\frac{2}{3}(1)^{3}}-\brk*{2(-1)-\frac{2}{3}(-1)^{3}}\\
+    &=\frac{8}{3}
+\end{align*}
+$\therefore$ Luas daerah yang dibatasi kedua kurva adalah $\ds\frac{8}{3}$.
+\begin{center}
+    \line(1,0){300}
+\end{center}
+\item Uji dua titik untuk sketsa $y=x+2$ dan tiga titik untuk $y=x^2$.
+\begin{center}
+    \begin{tabular}{|c|c|c|}\hline
+        $x$  & $0$ & $1$ \\ \hline
+        $y=x+2$ & $2$ & $3$ \\ \hline
+    \end{tabular}\quad
+    \begin{tabular}{|c|c|c|c|}\hline
+        $x$ & $-1$ & $0$ & $1$ \\ \hline
+        $y=x^{2}$ & $1$ & $0$ & $1$ \\ \hline
+    \end{tabular}
+\end{center}
+Diperoleh daerah yang dibatasi seperti berikut.
+\begin{center}
+    \begin{tikzpicture}[>=stealth]
+    \begin{axis}[
+        xmin=-3,xmax=3,
+        ymin=-0.5,ymax=5,
+        axis x line=middle,
+        axis y line=middle,
+        axis line style=<->,
+        xlabel={$x$},
+        ylabel={$y$},
+        ]
+        \addplot [name path=f, no marks,blue, domain=-3:3,samples=50]({x},{x+2});
+        \node [blue] at (-2,1){\scalebox{0.7}{$y=x+2$}};
+        \addplot [name path=g, no marks,red, domain=-3:3,samples=50]({x},{x^2});
+        \node [red] at (1.5,1){\scalebox{0.7}{$y=x^{2}$}};
+        \addplot [no marks,black, domain=-3:3,samples=50]({x},{4});
+        \node [black] at (1,4.3){\scalebox{0.7}{$y=4$}};
+        \node [draw, shape = circle, fill = blue, minimum size = 0.1cm, inner sep=0pt] at (0,2){};
+        \node [draw, shape = circle, fill = blue, minimum size = 0.1cm, inner sep=0pt] at (1,3){};
+        \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (-1,1){};
+        \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (0,0){};
+        \node [draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt] at (1,1){};
+        \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=-1:2},]; 
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+Selanjutnya akan dicari volume benda putar yang terbentuk jika daerah tersebut diputar 
+mengelilingi garis $y=4$.\\
+Gunakan metode cincin. Dari gambar sebelumnya, bila diputar mengelilingi garis $y=4$, maka bagian 
+luarnya adalah jarak dari $y=4$ ke $y=x^{2}$ yaitu $4-x^{2}$ dan bagian dalamnya adalah jarak 
+dari $y=4$ ke $y=x+2$ yaitu jari-jari $4-(x+2)=2-x$. 
+
+Metode cincin mempartisi daerah volume secara tegak lurus terhadap $y=4$ 
+sehingga integrasi dilakukan terhadap $dx$. Sebelum melakukan integrasi, akan dicari titik potong 
+kedua persamaan.
+\begin{align*}
+    y = x+2,\quad y = x^{2} &\Longrightarrow x+2= x^{2}\\
+    &\iff 0 = x^{2}-x-2\\
+    &\iff 0 = (x-2)(x+1)
+\end{align*}
+Sehingga $x = -1$ dan $y=2$ adalah titik potong kedua persamaan juga menjadi batas integrasi.
+
+Gunakan integral untuk memperoleh volume
+\begin{align*}
+    V &= \int \text{Luas bagian luar} - \text{Luas bagian dalam}\\
+    &=\int_{-1}^{2} \pi(4-x^2)^2 - \pi(2-x)^{2}\,dx \\
+    &=\pi\int_{-1}^{2} \brk*{x^{4}-8x^{2}+16} - \brk*{x^{2}-4x+4}\,dx \\
+    &=\pi\int_{-1}^{2} \brk*{x^{4}-9x^{2}+4x+12}\,dx \\
+    &=\pi\eval{\frac{1}{5}x^{5}-3x^{3}+2x^{2}+12x}{-1}{2} \\
+    &= \brk*{\frac{72}{5}-\brk*{-\frac{36}{5}}}=\frac{108}{5}\pi
+\end{align*}
+Berikut ilustrasi hasil benda padat
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[view={-30}{30},colormap/Spectral-9]
+    \begin{scope}
+        \def\ry{(4)}
+        \def\fx{(x^2)}
+        \addplot3[surf,shader=flat,
+            samples=25,
+            domain=-1:2,y domain=0:2*pi,
+            z buffer=sort]
+            (x,{((\fx-\ry) * cos(deg(y))+\ry)}, {((\fx-\ry) * sin(deg(y))+\ry)});
+    \end{scope}
+
+    \begin{scope}
+        \def\ry{(4)}
+        \def\fx{(x+2)}
+        \addplot3[surf,shader=flat,
+            samples=25,
+            domain=-1:2,y domain=0:2*pi,
+            z buffer=sort]
+            (x,{((\fx-\ry) * cos(deg(y))+\ry)}, {((\fx-\ry) * sin(deg(y))+\ry)});
+    \end{scope}
+    \addplot3[black,shader=flat,
+            samples=25,
+            domain=-1:2,
+            z buffer=sort]
+            (x,4,4);
+    \node at (-1,5,4) {$y=4$};
+    \end{axis}
+\end{tikzpicture}       
+\end{center}
+$\therefore$ Telah disketsa daerah yang dibatasi oleh $y=x+2$ dan $y=x^{2}$ lalu volume 
+benda putar yang terbentuk jika daerah tersebut diputar mengelilingi garis $y=4$ adalah 
+$\frac{108}{5}\pi$ satuan.
+\end{enumerate}
+\begin{center}
+    \line(1,0){300}
+\end{center}
