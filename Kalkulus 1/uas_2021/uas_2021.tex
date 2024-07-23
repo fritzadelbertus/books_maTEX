@@ -1,0 +1,85 @@
+\newpage
+\begin{flushright}
+    \textbf{\Large{Ujian Akhir Semester}}
+    \subsection*{Tahun 2021}
+    \addcontentsline{toc}{subsection}{UAS - 2021}
+\end{flushright}
+\vspace{0.5cm}
+\hrule height 2pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{MATERI}}
+    \begin{enumerate}[leftmargin=*, label={\arabic*}.]
+        \item Teorema Dasar Kalkulus
+        \item Aplikasi integral dalam mencari volume benda putar
+        \item Fungsi Invers
+        \item Fungsi Trigonometri dan Invers Trigonometri
+        \item Teknik-teknik Integrasi
+    \end{enumerate}
+\end{center}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Dengan menggunakan Teorema Dasar Kalkulus, tentukanlah $F'(x)$ jika diketahui:
+\[
+F(x) = \int_{-x^{2}}^{5x}\frac{s^{2}}{1+s^{2}}\,ds
+\]
+\item Sketsa dan carilah volume benda putar yang terbentuk, jika daerah yang 
+diwarnai biru pada gambar di bawah diputar mengelilingi sumbu-$y$ dengan 
+menggunakan:
+\begin{enumerate}[label={\alph*}.]
+    \item Metode Cincin
+    \item Metode Kulit Tabung
+\end{enumerate}
+\begin{center}
+    \begin{tikzpicture}[>=stealth]
+    \begin{axis}[
+        xmin=-0.2,xmax=1.2,
+        ymin=-0.2,ymax=1,
+        axis x line=middle,
+        axis y line=middle,
+        axis line style=<->,
+        xlabel={$x$},
+        ylabel={$y$},
+        ]
+        \addplot [name path=f, no marks,blue, domain=0:0.25*pi,samples=50]({tan(deg(x))},{x});
+        \node [blue] at (0.5,0.7){$x=\tan y$};
+        \addplot [name path=g, no marks,red, domain=0:0.25*pi,samples=50]({1},{x});
+        \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=0:1.1},];
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+\item Misalkan $\ds f(x)=\frac{a^{x}-1}{a^{x}+1}$ untuk $a$ tetap, $a>0$, $a\neq 1$.
+\begin{enumerate}[label={\alph*}.]
+    \item Jelaskan mengapa $f$ mempunyai invers.
+    \item Carilah $f^{-1}$.
+\end{enumerate}
+\item Carilah $\ds \frac{dy}{dx}$ di titik $\ds P\brk*{\frac{1}{2},-\sqrt{2}}$ jika diketahui:
+\[
+y\arccos(xy) = \frac{-3\sqrt{2}}{4}\pi
+\]
+\item Hitunglah integral berikut:
+\begin{enumerate}[label={\alph*}.]
+    \item $\ds \int\frac{2x^{3}+x^{2}+4}{\brk*{x^{2}+4}^{2}}\,dx$
+    \item $\ds \int x^{3}e^{-3x}\,dx$
+\end{enumerate}
+\end{enumerate}
+\vspace{0.2cm}
+\hrule height 1pt
+\vspace{0.5cm}
+\begin{center}
+    \textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Halo
+\end{enumerate}
+
+\begin{center}
+    \line(1,0){300}
+\end{center}
