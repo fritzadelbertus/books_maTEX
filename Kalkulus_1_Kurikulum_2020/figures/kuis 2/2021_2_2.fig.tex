@@ -1,0 +1,33 @@
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[view={-30}{30},colormap/Spectral-9]
+    \begin{scope}
+        \def\rx{(5)}
+        \def\fx{(4*x-x^2)}
+        \addplot3[surf,shader=flat,
+            samples=20,
+            domain=0:2,y domain=0:2*pi,
+            z buffer=sort]
+            ({(((x-\rx) * cos(deg(y)))+\rx)}, {(((x-\rx) * sin(deg(y)))+\rx)}, {\fx});
+    \end{scope}
+
+    \begin{scope}
+        \def\rx{(5)}
+        \def\fx{(x^2)}
+        \addplot3[surf,shader=flat,
+            samples=20,
+            domain=0:2,y domain=0:2*pi,
+            opacity=0.25,
+            z buffer=sort]
+            ({(((x-\rx) * cos(deg(y)))+\rx)}, {(((x-\rx) * sin(deg(y)))+\rx)}, {\fx});
+    \end{scope}
+    
+    \addplot3[black,shader=flat,
+        samples=25,
+        domain=0:4,
+        z buffer=sort]
+        (5,5,x);
+    \node at (4,3.7,5) {$x=5$};
+\end{axis}
+\end{tikzpicture}       
+\end{center}

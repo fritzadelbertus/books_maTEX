@@ -1,0 +1,228 @@
+\begin{flushright}
+    \textbf{\Large{Kuis 1}}
+    \subsection*{Tahun 2023}
+    \addcontentsline{toc}{subsection}{Kuis 1 - 2023}
+\end{flushright}
+
+
+\vspace{0.5cm}\hrule height 2pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{MATERI}}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Menyelesaikan pertidaksamaan yang melibatkan nilai mutlak.
+\item Fungsi komposisi dan menentukan domainnya.
+\item Mencari nilai limit kiri dan nilai limit kanan fungsi.
+\item Menentukan kekontinuan fungsi pada suatu titik.
+\end{enumerate}
+\end{center}
+
+
+\vspace{0.2cm}\hrule height 1pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Misalkan $f(x) = x^{2}-x$ dan $g(x)=\abs{x-1}$.
+    \begin{enumerate}[label={\alph*}.]
+    \item Tentukanlah nilai $x$ yang memenuhi $f(x) > g(x)$.
+    \item Jika $\ds h(x) = \frac{g(x)}{f(x)}$, maka tentukanlah 
+    domain dari $h(x)$. Jelaskanlah jawaban anda!
+    \end{enumerate}
+\item Misalkan
+\[
+    f(x) =
+    \begin{cases}
+        c^{2}x^{2}, &{x < 2},\\
+        (1-c)x, &{x \geq 2}.
+    \end{cases}
+\]
+Tentukan nilai $c$ agar $f$ kontinu di setiap bilangan real $x$.
+\end{enumerate}
+
+
+\vspace{0.2cm}\hrule height 1pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item
+    \begin{enumerate}[label={\alph*}.]
+    \item Akan dicari nilai $x$ yang memenuhi
+    $f(x) > g(x) \iff x^{2}-x > \abs{x-1}$.
+
+    \vspace{0.1cm}
+    Hanya ada 3 aturan dasar yang diperlukan untuk menyelesaikan pertidaksamaan.
+        \begin{enumerate}[label={\arabic*})]
+        \item Jumlahkan kedua ruas dengan bilangan yang sama.
+        \item Kalikan kedua ruas dengan bilangan positif yang sama.
+        \item Kalikan kedua ruas dengan bilangan negatif yang sama dan 
+        mengubah arah pertidaksamaannya.
+        \end{enumerate}
+    Pada soal ini ruas kanan melibatkan nilai mutlak. Untuk menyelesaikannya 
+    pertidaksamaan perlu diubah kebentuk yang tidak melibatkan nilai mutlak. Cara yang 
+    selalu bisa digunakan adalah dengan membagi kasus pada nilai $x$.
+        
+    Perhatikan bahwa sesuai definisi nilai mutlak
+    \[
+    \abs{x-1} = 
+    \begin{cases}
+        x-1, &\text{jika $x-1 \geq 0$ atau $x \geq 1$}\\
+        -(x-1), &\text{jika $x-1 < 0$ atau $x < 1$}
+    \end{cases}
+    \]
+    Sehingga pertidaksamaan ini diselesaikan dengan membagi menjadi 2 kasus 
+    seperti yang terlihat pada garis bilangan di bawah ini.
+
+    \input{figures/kuis_1/2023_1_1.fig.tex}
+        
+    \textbf{Kasus 1: $x < 1$}\\
+    Maka
+    \begin{align*}
+        x^{2}-x > \abs{x-1}
+        \iff &x^{2}-x > -(x-1)
+        &\text{definisi nilai mutlak} \\
+        \iff &x^{2}-x > 1-x
+        &\text{penyederhanaan}\\
+        \iff &x^{2} - 1 > 0
+        &\text{kedua ruas jumlahkan $x-1$}\\
+        \iff &(x+1)(x-1) > 0
+        &\text{faktorisasi}
+    \end{align*}
+    Maka $x=1$ dan $x=-1$ adalah titik stasioner.
+
+    \input{figures/kuis_1/2023_1_2.fig.tex}
+
+    Nilai yang memenuhi adalah $x < -1$ atau $x > 1$.
+    Karena syarat kasus ini adalah $x < 1$ maka nilai $x$ yang memenuhi adalah
+    $x < -1$.
+
+    \textbf{Kasus 2: $x \geq 1$}\\
+    Maka
+    \begin{align*}
+        x^{2}-x > \abs{x-1}
+        \iff &x^{2}-x > x-1
+        &\text{definisi nilai mutlak} \\
+        \iff &x^{2} -2x + 1> 0
+        &\text{kedua ruas jumlahkan $-x+1$}\\
+        \iff &(x-1)(x-1) > 0
+        &\text{faktorisasi}
+    \end{align*}
+    Maka $x=-1$ dan $x=-1$ adalah titik stasioner.
+
+    \input{figures/kuis_1/2023_1_3.fig.tex}
+
+    Nilai yang memenuhi adalah $x \neq 1$.
+    Karena syarat kasus ini adalah $x \geq 1$ maka nilai $x$ yang memenuhi adalah
+    $x > 1$.
+        
+    Semua nilai $x$ yang memenuhi $f(x) > g(x)$ adalah gabungan nilai $x$ 
+    dari kedua kasus. Sehingga nilai $x$ yang memenuhi adalah 
+    $\set*{x \in \mathbb{R} \mid x < -1 \cup x > 1}$
+    atau $\oic*{-\infty, -1} \cup \cio*{1, \infty}$
+        
+    $\therefore$ Nilai $x$ yang memenuhi $f(x) > g(x)$ adalah
+    $\set*{x \in \mathbb{R} \mid x < -1 \cup x > 1}$
+    atau $\oic*{-\infty, -1} \cup \cio*{1, \infty}$
+
+
+\begin{center}\line(1,0){150}\end{center}
+
+
+    \item Akan dicari domain dari $\ds h(x) = \frac{g(x)}{f(x)}$.
+    
+    Dari definisi tersebut ini adalah fungsi komposisi dengan 
+    \[
+        h(x) = \frac{g(x)}{f(x)} = \frac{\abs{x-1}}{x^{2}-x}
+    \]
+    Sehingga domainnya adalah irisan dari domain $f$, $g$, dan 
+    $\ds \frac{\abs{x-1}}{x^{2}-x}$.\\
+    Domain dari $f$ dan $g$ adalah $\mathbb{R}$, sehingga cukup mencari 
+    domain dari $\ds \frac{\abs{x-1}}{x^{2}-x}$. Karena melibatkan 
+    bentuk rasional maka penyebut tidak boleh nol. Sehingga
+    \begin{align*}
+        x^{2}-x \neq 0 \iff &x(x-1)\neq 0
+        &\text{faktorisasi}
+    \end{align*}
+    Sehingga $x \neq 1$ dan $x \neq 0$. \\Domain dari 
+    $\ds \frac{\abs{x-1}}{x^{2}-x}$ adalah 
+    $\set*{x \in \mathbb{R} \mid x \neq 1, x\neq 0}$.\\ Irisan dari ketiga domain
+    $\mathbb{R}$, $\mathbb{R}$, dan $\set*{x \in \mathbb{R} \mid x \neq 1, x\neq 0}$ 
+    adalah $\set*{x \in \mathbb{R} \mid x \neq 1, x\neq 0}$.\\
+    Dengan demikian domain dari $h$ adalah 
+    $\set*{x \in \mathbb{R} \mid x \neq 1, x\neq 0}$.
+
+    $\therefore$ Domain dari fungsi $h$ adalah 
+    $\set*{x \in \mathbb{R} \mid x \neq 1, x\neq 0}$
+
+    \end{enumerate}
+
+\begin{center}\line(1,0){300}\end{center}
+
+
+\item
+    \begin{enumerate}[label={\alph*}.]
+    \item \[
+    f(x) = 
+    \begin{cases}
+        c^{2}x^{2}, &{x < 2},\\
+        (1-c)x, &{x \geq 2}.
+    \end{cases}
+    \]
+    Akan dicari nilai $c$ agar fungsi $f$ kontinu di setiap bilangan real.
+
+    Bagian pertama dari fungsi \textit{pointwise} ini adalah bentuk kuadratik, 
+    dan yang kedua adalah bentuk linear. Keduanya kontinu di setiap bilangan real. 
+    Sehingga titik yang mungkin menyebabkan diskontinuitas hanya di $x=2$.
+
+    Tiga syarat untuk membuktikan $f$ kontinu di $x=2$ adalah
+        \begin{enumerate}[label={\arabic*}.]
+        \item $\lim_{x\to 2} f(x)$ ada.
+        \item $f(2)$ ada.
+        \item $\lim_{x\to 2} f(x) = f(2)$
+        \end{enumerate}
+    Karena fungsi $f$ diharapkan kontinu di setiap bilangan real, diasumsikan $f$ 
+    juga memenuhi ketiga syarat diatas. Maka dari syarat pertama $\lim_{x\to 2} f(x)$ 
+    ada. Jika limitnya ada maka limit kanan dan kirinya ada dan 
+    \[
+    \lim_{x\to 2^{-}} f(x) = \lim_{x\to 2^{+}} f(x)
+    \]
+    sehingga
+    \begin{align*}
+        \lim_{x\to 2^{-}} f(x) = \lim_{x\to 2^{+}} f(x)
+        \iff &\lim_{x\to 2^{-}} c^{2}x^{2} = \lim_{x\to 2^{+}} (1-c)x\\
+        \iff &c^{2}2^{2} = (1-c)2\\
+        \iff &2c^{2} = 1-c\\
+        \iff &2c^{2}+c-1 = 0\\
+        \iff &(2c-1)(c+1) = 0
+    \end{align*}
+    Dari syarat pertama maka haruslah $c=-1$ atau $c=\frac{1}{2}$\\
+    Misalkan $c=-1$ maka limit saat $x$ menuju 2 adalah 4 (Subtitusi ke limit kiri dan 
+    kanannya). Akan dipastikan kedua syarat lainnya berlaku. Syarat kedua berlaku 
+    dengan $f(2) = (1-(-1))2 = 4$. Syarat ketiga juga berlaku karena 
+    $\lim_{x\to 2} f(x) = 4 = f(2)$.\\
+    Misalkan $c=\frac{1}{2}$ maka limit saat $x$ menuju 2 adalah 1 (Subtitusi ke limit 
+    kiri dan kanannya). Akan dipastikan kedua syarat lainnya berlaku. Syarat kedua berlaku 
+    dengan
+    \[
+        f(2) = \brk*{1-\frac{1}{2}}2 = 1
+    \] 
+    dan syarat ketiga juga berlaku Karena
+    \[
+        \lim_{x\to 2} f(x) = 1 = f(2)
+    \] 
+    Sehingga kedua nilai $c=-1$ dan $c=\frac{1}{2}$ akan membuat fungsi $f$ 
+    kontinu di setiap bilangan real.
+
+    $\therefore$ Nilai $c$ agar fungsi $f$ kontinu di setiap bilangan real adalah $c=-1$ 
+    dan $c=\frac{1}{2}$
+    
+    \end{enumerate}
+\end{enumerate}
+
+\begin{center}\line(1,0){300}\end{center}
