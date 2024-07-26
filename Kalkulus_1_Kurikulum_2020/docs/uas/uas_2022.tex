@@ -1,0 +1,189 @@
+\begin{flushright}
+    \textbf{\Large{Ujian Akhir Semester}}
+    \subsection*{Tahun 2022}
+    \addcontentsline{toc}{subsection}{UAS - 2022}
+\end{flushright}
+
+
+\vspace{0.5cm}\hrule height 2pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{MATERI}}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Fungsi Trigonometri dan Inver Trigonometri
+\item Fungsi Hiperbolik
+\item Teknik-teknik Integrasi
+\end{enumerate}
+\end{center}
+
+
+\vspace{0.2cm}\hrule height 1pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{SOAL}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Carilah $\ds \frac{dy}{dx}$ dari 
+    \begin{enumerate}[label={\alph*}.]
+    \item $\ds \arctan\brk*{\frac{y}{x}}=\ln\sqrt{x^{2}+y^{2}}$
+    \item $\ds y=\ln \cosh (x+a)+x\sqrt{a^{2}-x^{2}}+a^{2}\arcsin\brk*{\frac{x}{a}}$
+    \end{enumerate}
+\item Selesaikan integral berikut ini dengan lengkap dan jelas!
+    \begin{enumerate}[label={\alph*}.]
+    \item $\int \cot^{3}(5x)\csc^{5}(5x)\,dx$  
+    \item $\ds \int \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}}\,dx$
+    \end{enumerate}
+\end{enumerate}
+
+
+\vspace{0.2cm}\hrule height 1pt\vspace{0.5cm}
+
+
+\begin{center}
+\textbf{\large{PEMBAHASAN}}
+\end{center}
+\begin{enumerate}[leftmargin=*, label={\arabic*}.]
+\item Akan dicari $\ds \frac{dy}{dx}$ dari 
+    \begin{enumerate}[label={\alph*}.]
+    \item $\ds \arctan\brk*{\frac{y}{x}}=\ln\sqrt{x^{2}+y^{2}}$
+    
+    Turunkan secara implisit
+    \begin{align*}
+        &\drv{x}{\arctan\brk*{\frac{y}{x}}} = \drv{x}{\ln\sqrt{x^{2}+y^{2}}}\\
+        \iff &\drv{x}{\arctan\brk*{\frac{y}{x}}} 
+        = \drv{x}{\frac{1}{2}\ln\brk*{x^{2}+y^{2}}}\\
+        \iff &\frac{1}{1+(y/x)^{2}}\drv{x}{\frac{y}{x}} 
+        = \frac{1}{2}\frac{1}{x^{2}+y^{2}}\drv{x}{x^{2}+y^{2}}\\
+    \end{align*}
+    \begin{align*}
+        \iff &\frac{x^{2}}{x^{2}+y^{2}}\frac{y'x-y}{x^{2}} 
+        = \frac{1}{2}\frac{1}{x^{2}+y^{2}}(2x+2yy')\\
+        \iff &\frac{xy'-y}{x^{2}+y^{2}} = \frac{x+yy'}{x^{2}+y^{2}}\\
+        \iff &xy'-y= x+yy'\\
+        \iff &xy'-yy'= x+y\\
+        \iff &y' = \frac{x+y}{x-y}
+    \end{align*}
+    $\therefore$ Diperoleh $\ds \frac{dy}{dx} = \frac{x+y}{x-y}$.
+
+
+\begin{center}\line(1,0){150}\end{center}
+
+
+    \item $\ds y=\ln \cosh (x+a)+x\sqrt{a^{2}-x^{2}}+a^{2}\arcsin\brk*{\frac{x}{a}}$
+    
+    Turunkan, ingat aturan turunan untuk fungsi hiperbolik dan aturan rantai.
+    \begin{align*}
+        \frac{dy}{dx}&=\drv{x}{\ln\cosh(x+a)+x\sqrt{a^{2}-x^{2}}+a^{2}\arcsin\brk*{\frac{x}{a}}}\\
+        &=\drv{x}{\ln\cosh(x+a)}+\drv{x}{x\sqrt{a^{2}-x^{2}}}
+        +\drv{x}{a^{2}\arcsin\brk*{\frac{x}{a}}}\\
+        &=\frac{1}{\cosh(x+a)}\drv{x}{\cosh(x+a)}+\brk*{\sqrt{a^{2}-x^{2}}
+        +x\frac{1}{2}\frac{1}{\sqrt{a^{2}-x^{2}}}\drv{x}{a^{2}-x^{2}}}\\
+        &+a^{2}\frac{1}{\sqrt{1-(x/a)^{2}}}\drv{x}{\frac{x}{a}}\\
+        &=\frac{\sinh(x+a)}{\cosh(x+a)}\drv{x}{x+a}+\brk*{\frac{a^{2}-x^{2}}{\sqrt{a^{2}-x^{2}}}
+        +\frac{x}{2\sqrt{a^{2}-x^{2}}}(-2x)}+\frac{a^{2}(a)}{\sqrt{a^{2}-x^{2}}}\frac{1}{a}\\
+        &=\tanh(x+a)(1)+\brk*{\frac{a^{2}-x^{2}-x^{2}}{\sqrt{a^{2}-x^{2}}}}
+        +\frac{a^{2}}{\sqrt{a^{2}-x^{2}}}\\
+        &=\tanh(x+a)+\frac{2a^{2}-2x^{2}}{\sqrt{a^{2}-x^{2}}}\\
+        &=\tanh(x+a)+\frac{2\brk*{\sqrt{a^{2}-x^{2}}}^{2}}{\sqrt{a^{2}-x^{2}}}\\
+        &=\tanh(x+a)+2\sqrt{a^{2}-x^{2}}\\
+    \end{align*}
+    $\therefore$ Diperoleh $\ds \frac{dy}{dx} = \tanh(x+a)+2\sqrt{a^{2}-x^{2}}$.
+    
+    \end{enumerate}
+
+\begin{center}\line(1,0){300}\end{center}
+
+
+\item Akan dicari hasil integral berikut
+    \begin{enumerate}[label={\alph*}.]
+    \item $\ds \int \cot^{3}(5x)\csc^{5}(5x)\,dx$  
+    
+    Gunakan subtitusi
+    \begin{align*}
+        &\int \cot^{3}(5x)\csc^{5}(5x)\,dx\\
+        =\,& \int \cot^{2}(5x)\csc^{4}(5x)\cot(5x)\csc(5x)\,dx\\
+        =\,& \int (\csc^{2}(5x)-1)\csc^{4}(5x)\frac{(-5)}{(-5)}\cot(5x)\csc(5x)\,dx\\
+        &\text{subtitusi $u=\csc(5x)$, dan $du = (-5)\csc(5c)\cot(5x)\,dx$}\\
+        =\,&-\frac{1}{5} \int (u^{2}-1)u^{4}\,du\\
+        =\,&-\frac{1}{5} \int u^{6}-u^{4}\,du\\
+        =\,&-\frac{1}{5}\brk*{\frac{1}{7}u^{7}-\frac{1}{5}u^{5}}+C\\
+        =\,&\frac{1}{25}u^{5}-\frac{1}{35}u^{7}+C\\
+        &\text{subtitusi balik $u=\csc(5x)$}\\
+        =\,&\frac{\csc^{5}(5x)}{25}-\frac{\csc^{7}(5x)}{35}+C
+    \end{align*}
+
+    $\therefore$ Diperoleh $\ds \int \cot^{3}(5x)\csc^{5}(5x)\,dx
+    =\frac{\csc^{5}(5x)}{25}-\frac{\csc^{7}(5x)}{35}+C$
+
+
+\begin{center}\line(1,0){150}\end{center}
+
+
+    \item $\ds \int \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}}\,dx$
+    
+    Gunakan dekomposisi untuk menyederhanakan pecahan
+    \[
+        \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}} 
+        = \frac{Ax+B}{x^{2}+2} + \frac{Cx+D}{\brk*{x^{2}+2}^{2}} 
+        + \frac{Ex+F}{\brk*{x^{2}+2}^{3}}
+    \]
+    Sehingga
+    \begin{align*}
+        x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4&=(Ax+B)(x^{2}+2)^{2}+(Cx+D)(x^{2}+2)+(Ex+F)\\
+        &=(Ax+B)(x^{4}+4x^{2}+4)+(Cx^{3}+Dx^{2}+2Cx+2D) \\
+        &+ Ex+F\\
+        &=(Ax^{5}+Bx^{4}+4Ax^{3}+4Bx^{2}+4Ax+4B)\\
+        &+Cx^{3}+Dx^{2}+(2C+E)x+(2D+F) \\
+        &=Ax^{5}+Bx^{4}+(4A+C)x^{3}+(4B+D)x^{2}\\
+        &+(4A+2C+E)x+(4B+2D+F) \\
+    \end{align*}
+    Karena ruas kanan dan ruas kiri sama, maka
+    \begin{align*}
+        &Ax^{5} =x^{5} \iff A = 1\\
+        &Bx^{4} = -x^{4} \iff B = -1\\
+        &(4A+C)x=(4+C)x^{3}=4x^{3} \iff 4+C = 4 \iff C=0\\ 
+        &(4B+D)x=(-4+D)x^{2}=-4x^{3} \iff -4+D = -4 \iff D=0\\ 
+        &(4A+2C+E)x=(4+0+E)x=8x \iff 4+E = 8 \iff E=4\\ 
+        &(4B+2D+F)x=(-4+0+F)x=8x \iff -4+F = -4 \iff F=0\\ 
+    \end{align*}
+    Dengan demikian
+    \[
+        \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}} 
+        = \frac{x-1}{x^{2}+2} + \frac{0}{\brk*{x^{2}+2}^{2}} 
+        + \frac{4x+0}{\brk*{x^{2}+2}^{3}}
+        = \frac{x-1}{x^{2}+2} + \frac{4x}{\brk*{x^{2}+2}^{3}}
+    \]
+    Sehingga
+    \begin{align*}
+        &\int \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}}\,dx\\
+        =\,&\int \frac{x-1}{x^{2}+2}\,dx + \int \frac{4x}{\brk*{x^{2}+2}^{3}}\,dx\\
+        =\,&\int \frac{x}{x^{2}+2}\,dx - \int \frac{1}{x^{2}+2}\,dx 
+        + \int \frac{4x}{\brk*{x^{2}+2}^{3}}\,dx\\
+        =\,&\int \frac{2}{2}\frac{x}{x^{2}+2}\,dx - \int \frac{1}{x^{2}+\brk*{\sqrt{2}}^{2}}\,dx 
+        + \int \frac{2(2x)}{\brk*{x^{2}+2}^{3}}\,dx\\
+        =\,&\frac{1}{2}\int \frac{1}{x^{2}+2}2x\,dx 
+        - \frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+        + 2\int \frac{1}{\brk*{x^{2}+2}^{3}}2x\,dx\\
+        &\text{subtitusi $u=x^{2}+2$ dan $du = 2x\,dx$}\\
+        =\,&\frac{1}{2}\int\frac{1}{u}\,du
+        -\frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+        +2\int \frac{1}{u^{3}}\,du\\
+        =\,&=\frac{1}{2}\ln\abs{u}-\frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+        +2\frac{1}{(-2)}\frac{1}{u^{2}}+C\\
+        &\text{subtitusi balik $u=x^{2}+2$}\\
+        =\,&=\frac{1}{2}\ln\abs*{x^{2}+2}-\frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+        -\frac{1}{\brk*{x^{2}+2}^{2}}+C\\
+        =\,&=\frac{1}{2}\ln\brk*{x^{2}+2}-\frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+        -\frac{1}{\brk*{x^{2}+2}^{2}}+C
+    \end{align*}
+
+    $\therefore$ Diperoleh hasil dari $\ds \int \frac{x^{5}-x^{4}+4x^{3}-4x^{2}+8x-4}{\brk*{x^{2}+2}^{3}}\,dx$\\
+    adalah $\ds \frac{1}{2}\ln\brk*{x^{2}+2}-\frac{1}{\sqrt{2}}\arctan\brk*{\frac{x}{\sqrt{2}}} 
+    -\frac{1}{\brk*{x^{2}+2}^{2}}+C$
+
+    \end{enumerate}
+\end{enumerate}
+
+\begin{center}\line(1,0){300}\end{center}

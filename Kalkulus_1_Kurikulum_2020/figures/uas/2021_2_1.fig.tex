@@ -1,0 +1,20 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-0.2,xmax=1.2,
+    ymin=-0.2,ymax=1,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$y$},
+    ]
+
+    \addplot [name path=f, no marks,blue, domain=0:0.25*pi,samples=50]({tan(deg(x))},{x});
+    \node [blue] at (0.5,0.7){$x=\tan y$};
+    \addplot [name path=g, no marks,red, domain=0:0.25*pi,samples=50]({1},{x});
+    \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=0:1.1},];
+\end{axis}
+\end{tikzpicture}
+\end{center}

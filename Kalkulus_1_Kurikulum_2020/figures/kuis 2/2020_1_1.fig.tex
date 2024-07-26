@@ -1,0 +1,23 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-5,xmax=3,
+    ymin=-4,ymax=2,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$f(x)$},
+    ]
+    
+    \addplot[no marks,blue, <-] 
+        expression[domain=-5:-0.01,samples=50]{cos(deg(x))};
+    \addplot[no marks,blue, ->] 
+        expression[domain=0:2.2,samples=50]{1-(x^2)};
+
+    \point{black}{(0,1)};
+    \point{black}{(1,0)};
+    \point{black}{(2,-3)};
+\end{axis}
+\end{tikzpicture}
+\end{center}

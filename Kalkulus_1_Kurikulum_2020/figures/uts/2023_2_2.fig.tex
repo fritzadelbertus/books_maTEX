@@ -1,0 +1,21 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-5.5,xmax=5.5,
+    ymin=-0.5,ymax=20,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$y$},
+    ]
+    \foreach \n in {-5,...,4} {
+        \addplot[no marks,red, -] 
+            expression[domain={\n}:{\n+1},samples=10]{floor(\n)^2}
+            node[draw, shape = circle, fill = white, minimum size = 0.1cm, inner sep=0pt]{}
+            node[pos=0, draw, shape = circle, fill = red, minimum size = 0.1cm, inner sep=0pt]{};
+    }
+    \node[red] at (2,15){$y=\floor{x}^2$};
+\end{axis}
+\end{tikzpicture}
+\end{center}

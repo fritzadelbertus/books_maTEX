@@ -1,0 +1,40 @@
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[view={-30}{30},colormap/Spectral-9]
+    \addplot3[surf,shader=flat,name path=g,
+        samples=25,
+        domain=0:2,y domain=0:2*pi,
+        z buffer=sort]
+        ({3*cos(deg(y))+3},{3*sin(deg(y))+3},x);
+
+    \begin{scope}
+        \def\rx{(3)}
+        \def\fx{(x^2)}
+        \addplot3[surf,shader=flat,name path=g,
+            samples=25,
+            domain=0:1,y domain=0:2*pi,
+            opacity=0.25,
+            z buffer=sort]
+            ({(((x-\rx) * cos(deg(y)))+\rx)}, {(((x-\rx) * sin(deg(y)))+\rx)}, {\fx});
+    \end{scope}
+
+    \begin{scope}
+        \def\rx{(3)}
+        \def\fx{(2-x)}
+        \addplot3[surf,shader=flat,name path=f,
+            samples=25,
+            domain=0:1,y domain=0:2*pi,
+            opacity=0.25,
+            z buffer=sort]
+            ({(((x-\rx) * cos(deg(y)))+\rx)}, {(((x-\rx) * sin(deg(y)))+\rx)}, {\fx});
+    \end{scope}
+
+    \addplot3[black,shader=flat,
+            samples=25,
+            domain=0:2,
+            z buffer=sort]
+            (3,3,x);
+    \node at (3,1,2) {$x=3$};
+\end{axis}
+\end{tikzpicture}
+\end{center}

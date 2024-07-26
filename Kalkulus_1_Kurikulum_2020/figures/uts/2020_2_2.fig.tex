@@ -1,0 +1,34 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-5,xmax=5,
+    ymin=-5,ymax=5,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$g(x)$},
+    ]
+    \addplot[no marks,blue, <-] 
+        expression[domain=-5:-0.01,samples=50]{1/x} 
+        node[pos=0,anchor=south west]{};
+    \addplot[no marks,blue, ->] 
+        expression[domain=0.01:5,samples=50]{1/x} 
+        node[pos=0,anchor=south west]{};
+
+    \point{black}{(0.5,2)};
+    \point{black}{(1,1)};
+    \point{black}{(2,0.5)};
+    \node at (1.25,2) {\scalebox{0.75}{$(0.5,2)$}};
+    \node at (1.75,1.2) {\scalebox{0.75}{$(1,1)$}};
+    \node at (3,0.8) {\scalebox{0.75}{$(2,0.5)$}};
+
+    \point{black}{(-0.5,-2)};
+    \point{black}{(-1,-1)};
+    \point{black}{(-2,-0.5)};
+    \node at (-2,-2) {\scalebox{0.75}{$(-0.5,-2)$}};
+    \node at (-2,-1.2) {\scalebox{0.75}{$(-1,-1)$}};
+    \node at (-2,0.25) {\scalebox{0.75}{$(-2,-0.5)$}};
+\end{axis}
+\end{tikzpicture}
+\end{center}

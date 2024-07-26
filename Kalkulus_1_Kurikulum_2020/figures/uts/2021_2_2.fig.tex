@@ -1,0 +1,23 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-4,xmax=4,
+    ymin=-2,ymax=4,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$y$},
+    ]
+    \addplot[no marks,blue, <-] 
+        expression[domain=-3.75:-1.732,samples=100]{sqrt(x^2-3)};
+    \addplot[no marks,blue, ->] 
+        expression[domain=1.7320508:3.75,samples=100]{sqrt(x^2-3)};
+    
+    \point{black}{(1.7320508,0)};
+    \point{black}{(2,1)};
+    \point{black}{(2.64575,2)};
+    \point{black}{(3.46410,3)};
+\end{axis}
+\end{tikzpicture}
+\end{center}

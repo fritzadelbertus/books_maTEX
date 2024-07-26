@@ -1,0 +1,58 @@
+% ===== Setup Page Layout =====
+\documentclass{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={6in, 8in},
+ left=35mm
+ }
+\usepackage{graphicx}
+
+\input{packages.tex}
+
+\title{Kalkulus 1}
+\author{Fritz Adelbertus Sitindaon}
+\date{}
+
+\begin{document}
+% ===== Cover =====
+\begin{center}
+    \textbf{\HUGE{KALKULUS 1}}
+
+    \vspace{0.5cm}
+    \textbf{\Large Kurikulum 2020}\\
+    \vspace{0.5cm}
+    \textbf{\Large Fritz Adelbertus Sitindaon}
+
+    \vspace{7cm}
+    \scalebox{15}{$\ds \lim_{x \to \infty}$}
+\end{center}
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+
+\include{docs/kuis_1/kuis_1_2020}
+\include{docs/kuis_1/kuis_1_2021}
+\include{docs/kuis_1/kuis_1_2022}
+\include{docs/kuis_1/kuis_1_2023}
+\include{docs/uts/uts_2020}
+\include{docs/uts/uts_2021}
+\include{docs/uts/uts_2022}
+\include{docs/uts/uts_2023}
+\include{docs/kuis_2/kuis_2_2020}
+\include{docs/kuis_2/kuis_2_2021}
+\include{docs/kuis_2/kuis_2_2022}
+\include{docs/kuis_2/kuis_2_2023}
+\include{docs/uas/uas_2020}
+\include{docs/uas/uas_2021}
+\include{docs/uas/uas_2022}
+\include{docs/uas/uas_2023}
+
+\begin{thebibliography}{9}
+\bibitem{valberg}
+Valberg, D., Purcel, E.J., Rigdon, S.E., (2006). \emph{Calculus}, Prentice Hall, 9th ed.
+\end{thebibliography}
+
+\end{document}

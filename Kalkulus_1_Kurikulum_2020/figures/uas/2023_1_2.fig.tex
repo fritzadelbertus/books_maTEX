@@ -1,0 +1,39 @@
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[view={-30}{30},colormap/Spectral-9]
+    \begin{scope}
+        \def\ry{(-1)}
+        \def\fx{(2-x)}
+        \addplot3[surf,shader=flat,name path=f,
+            samples=25,
+            domain=0:1,y domain=0:2*pi,
+            z buffer=sort]
+            (x,{((\fx-\ry) * cos(deg(y))+\ry)}, {((\fx-\ry) * sin(deg(y))+\ry)});
+    \end{scope}
+
+    \begin{scope}
+        \def\ry{(-1)}
+        \def\fx{(x^2)}
+        \addplot3[surf,shader=flat,name path=g,
+            samples=25,
+            domain=0:1,y domain=0:2*pi,
+            opacity=0.25,
+            z buffer=sort]
+            (x,{((\fx-\ry) * cos(deg(y))+\ry)}, {((\fx-\ry) * sin(deg(y))+\ry)});
+    \end{scope}
+
+    \addplot3[surf,shader=flat,name path=g,
+        samples=25,
+        domain=0:2,y domain=0:2*pi,
+        z buffer=sort]
+        (0,{(x+1)*cos(deg(y))-1},{(x+1)*sin(deg(y))-1});
+
+    \addplot3[black,shader=flat,
+            samples=25,
+            domain=0:1,
+            z buffer=sort]
+            (x,-1,-1);
+    \node at (0,-1,-1) {$y=-1$};
+\end{axis}
+\end{tikzpicture}
+\end{center}

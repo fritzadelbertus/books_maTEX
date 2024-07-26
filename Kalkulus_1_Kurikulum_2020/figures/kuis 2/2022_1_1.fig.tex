@@ -1,0 +1,28 @@
+\begin{center}
+\begin{tikzpicture}[>=stealth]
+\begin{axis}[
+    xmin=-2,xmax=3,
+    ymin=-2.5,ymax=0.5,
+    axis x line=middle,
+    axis y line=middle,
+    axis line style=<->,
+    xlabel={$x$},
+    ylabel={$y$},
+    ]
+
+    \addplot [name path=f, no marks,blue, domain=-2:3,samples=50]({x},{x-x^2});
+    \node [blue] at (2,-0.5){\scalebox{0.7}{$y=x-x^{2}$}};
+    \addplot [name path=g, no marks,transparent, domain=-2:3,samples=50]({x},{0});
+    \addplot [no marks,black, domain=-2:3,samples=50]({x},{-1});
+    \node [black] at (2.2,-1.15){\scalebox{0.7}{$y=-1$}};
+
+    \point{blue}{(0,0)};
+    \point{blue}{(1,0)};
+    \point{blue}{(2,-2)};
+
+    \addplot [thick, color=cyan, fill=cyan, fill opacity=0.5]
+        fill between[of=f and g, soft clip={domain=0:1},]; 
+    \node [black] at (0.5,0.1){$R$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
